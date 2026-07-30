@@ -1,0 +1,13 @@
+site_name: Apuntes UCR
+site_url: https://ignaciosanm.github.io
+site_description: Apuntes de Economía en LaTeX
+site_author: Ignacio Sanabria
+
+theme:
+  name: material
+  language: es
+
+nav:
+  - Inicio: index.md
+  - Cursos:
+      - Microeconomía I: courses/microeconomia-i/index.md

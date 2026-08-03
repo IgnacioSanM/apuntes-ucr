@@ -1,11 +1,31 @@
-site_name: Apuntes UCR
+site_name: Notas UCR
 site_url: https://ignaciosanm.github.io
-site_description: Apuntes de Economía en LaTeX
+site_description: Apuntes de Economía
 site_author: Ignacio Sanabria
 
 theme:
   name: material
   language: es
+  logo: assets/logo.svg
+  font:
+    text: Source Sans Pro
+    code: JetBrains Mono
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: green
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: amber
+
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
 
 nav:
   - Inicio: index.md

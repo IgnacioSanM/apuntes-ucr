@@ -1,0 +1,198 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc} % Codificación de caracteres
+\usepackage[spanish]{babel} % Idioma del documento
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{tabularx}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{svg}
+\usepackage{float}
+
+\title{Teoria del Consumidor}
+\author{Ignacio Sanabria}
+\date{Agosto 26}
+
+\begin{document}
+    \maketitle
+\section{Preferencias}
+La limitación de conocimiento rompe las preferencias de los agentes económicos. 
+\subsection{Relacion de Preferencias}
+Sea 
+\begin{enumerate}
+    \item $\hat{a}\succeq a'\xrightarrow{}$ Debilmente Preferido 
+    \item $\hat{a}\succ a'\xrightarrow{}$ Estrictamente preferido
+    \item $\hat{a}\sim a'\xrightarrow{}$ Indiferente
+\end{enumerate}
+Donde $\hat{a},a'$ son canastas de bienes.
+
+Se llaman \textbf{Axiomas de preferencia} si cumplen:
+\begin{enumerate}
+    \item \textbf{Reflexibilidad}: $\;\hat{a}\succeq \hat{a}$
+    \item \textbf{Complejitud}: $\;\hat{a}\succ a'$,  $\quad a'\succ \hat{a}$, $\quad\hat{a}\sim a'$
+    \item \textbf{Transitividad}: $\; \hat{a}\succ a' \quad$ y $\quad a'\succ \bar{a} \quad \therefore\;\hat{a} \succ \bar{a}$ 
+    \item \textbf{Continuidad}: Sean conjuntos cerrados y finitos. Es decir, poseen doble diferenciablidad. \textit{Una funcion monotona, derivable y continua.}
+\end{enumerate}
+
+Si se cumplen los axiomas de preferencia, podemos decir que pertenencen a una relacion de preferencias tal que: $\hat{a}=\{\hat{a}:\hat{a}\succ a\; \forall \;a \in A \}$
+
+\subsection{Funcion de Utilidad}
+
+Sea $U:A\xrightarrow{}\mathbb{R}$ tal que:
+\begin{itemize}
+    \item Si $\; a\xrightarrow{} u(a)$
+    \item Si $\; \hat{a} \succeq a' \Rightarrow u(\hat{a}) \geq u(a')$
+    \item Si $\; \hat{a}\;$ es lo mas preferido $\Rightarrow Max_a(u(a))=u(\hat{a})$
+\end{itemize} 
+\newpage
+\section{Curvas de Indiferencia}
+\begin{figure} [H]
+    \centering
+    \includesvg[width=0.5\linewidth]{figuras/curva_indf_1.drawio.svg}
+    \caption{Curva de Indiferencia}
+    \label{fig:placeholder}
+\end{figure}
+
+Sean $X_1,X_2$ canastas, tal que todas tienen la misma utilidad. \\
+Tal que $u(x_1,x_2)=u_0$, donde su pendiente esta dada por: \\\\
+$du_o=\frac{\delta u}{\delta x_1}dx_1+\frac{\delta u}{\delta x_2}dx_2\Rightarrow 0=U_1dx_1+U_2dx_2\Rightarrow \frac{dx_2}{dx_1}=\frac{-U_1}{U_2}$\\\\ $\therefore TMS= \lvert\frac{dx_2}{dx_1}\rvert=\frac{U_1}{U_2}$\\\\
+La $TMS$ es decreciente para cualquiera par de canastas $x^A,x^B$.\\
+Tal que: $u(x^A)=u(x^B)=u_0$ y $\lambda\in\;]0,1[$.\\\\
+$u(\lambda x^A + (1-\lambda)x^B)>u_0$
+\begin{figure} [H]
+    \includesvg[width=0.5\linewidth]{figuras/TMS_1.drawio.svg}
+    \label{fig:placeholder}
+\end{figure}
+\subsection{Prueba Curvas Indiferencia}
+Para asegurar de forma matematica necesito comprobar que $\frac{\Delta TMS}{\Delta x_1}<0$
+\begin{align*}
+    TMS=\frac{u_1}{u_2}\Rightarrow dTMS=\frac{\delta(TMS)}{\delta x_1}\cdot dx_1 + \frac{\delta(TMS)}{\delta x_2}\cdot dx_2\\\\
+    dTMS=\frac{\delta(\frac{u_1}{u_2})}{\delta x_1}\cdot dx_1 + \frac{\delta(\frac{u_1}{u_2})}{\delta x_2}\cdot dx_2\\\\
+    dTMS=\frac{u_{11}\cdot u_2-u_{21}\cdot u_1}{(u_2)^2}dx_1+\frac{u_{12}\cdot u_2-u_{22}\cdot u_1}{(u_2)^2}dx_2\\\\ 
+    \textbf{Recordemos}: \; \frac{dx_2}{dx_1}=\frac{-u_1}{u_2}\Rightarrow dx_2=\frac{-u_1}{u_2}\cdot dx_1\\\\ 
+    dTMS=\frac{u_{11}\cdot u_2-u_{21}\cdot u_1}{(u_2)^2}dx_1+\frac{u_{12}\cdot u_2-u_{22}\cdot u_1}{(u_2)^2}(\frac{-u_1}{u_2}\cdot dx_1)\\\\
+    dTMS=\frac{1}{u_2^3}(u_{11}u_2^2-u_{21}u_1u_2-u_{12}u_1u_2+u_{22}u_1^2)\\\\ \textit{Recordemos que}\quad u_{12}=u_{21}\\\\ 
+    \therefore \frac{\Delta TMS}{\Delta x_1}=\frac{1}{u_2^3}(u_{11}u_2^2-2(u_{21}u_1u_2)+u_{22}u_1^2)\\\\ \text{Donde $\frac{1}{u_2^3}$ es positiva y $(u_{11}u_2^2-2(u_{21}u_1u_2)+u_{22}u_1^2)$ es negativa.}\\\\ \textbf{Concavidad Matemática de la Utilidad}=(u_{11}u_2^2-2(u_{21}u_1u_2)+u_{22}u_1^2) \\ \text{Si la Concavidad Matemática es negativa, la Utilidad es cóncava.}\\\\ 
+    \therefore \frac{\Delta TMS}{\Delta x_1}<0
+\end{align*}
+\newpage
+\section{Restriccion Presupuestaria}
+Cada individuo en la economia tiene un presupuesto dado por sus ingresos ($m$) de forma que la suma del precio de cada producto no puede ser mayor a este ingreso. \\\\ 
+Tal que: $\sum_{i=1}^np_ix_i \le m \Rightarrow p_1x_1+p_2x_2 \le m$
+\begin{figure} [H]
+    \includesvg[width=0.50\linewidth]{figuras/restric_presup_1}
+    \label{fig:placeholder}
+\end{figure}
+\begin{itemize}
+    \item Al escoger ABC \textbf{no hay holgura}. Se agota $m$.
+    \item En DFG hay holgura y no es optimo. 
+\end{itemize}
+Por lo tanto para trabajar la restriccion presupuestaria lo que buscamos es maximizar la utilidad dado un nivel de ingreso fijo. \\ Para ello podemos trabajarlo con un \textit{Lagrangiano}. \\\\
+$Max\; U(x_1,x_2)\quad $ s.a $\quad p_1x_1+p_2x_2 \le m$ \\
+\begin{align}
+    \mathcal{L}_{x_1}=\frac{\delta u}{\delta x_1}-\lambda p_1 \ge 0\quad ; \quad x_1\mathcal{L}_{x_1}=0\\ 
+    \mathcal{L}_{x_2}=\frac{\delta u}{\delta x_2}-\lambda p_2 \ge 0\quad ; \quad x_2\mathcal{L}_{x_2}=0\\
+    \mathcal{L}_\lambda=m-p_1x_1-p_2x_2 \ge 0\quad ; \quad \lambda\mathcal{L}_\lambda=0
+\end{align}
+$
+    \textbf{Caso A:}\quad x_1>0;\; x_2>0;\; \lambda>0 \\\\ 
+    \begin{array}{c|r}
+            x_1\mathcal{L}_{x_1}=0
+         &   u_1=\lambda p_1 \\ x_2\mathcal{L}_{x_2}=0
+         &  u_2=\lambda p_2 \\ \lambda\mathcal{L}_\lambda=0 
+         & m=p_1x_1+p_2x_2
+    \end{array}
+    \\\\\\
+    \therefore TMS=\frac{u_1}{u_2}=\frac{p_1}{p_2}\\\\
+$ 
+\newpage
+$
+    \textbf{Caso B:}\quad x_1=0;\; x_2>0;\; \lambda>0 \\\\ 
+    \begin{array}{c|r} 
+    
+        u_1-\lambda p_1<0 \\
+        u_2-\lambda p_2=0 & \therefore TMS=\frac{u_1}{u_2} \le \frac{p_1}{p_2}\\ 
+        m=p_2x_2
+    \end{array}
+    \\\\\\   
+$
+$ 
+    \textbf{Caso C:}\quad x_1>0;\; x_2=0;\; \lambda>0 \\\\ 
+        \begin{array}{c|r} 
+        
+            u_1-\lambda p_1=0 \\
+            u_2-\lambda p_2<0 & \therefore TMS=\frac{u_1}{u_2} > \frac{p_1}{p_2}\\ 
+            m=p_1x_1
+        \end{array}
+        \\\\\\   
+$
+\section{Dualidad de Optimalidad}
+\subsection{Demanda Marshaliana}
+Es una función que asigna para cada nivel de ingreso ($m$) y precios ($p_1,...,p_n$) la cantidad consumida de un bien $x_j$ que permita alcanzar la mayor utilidad posible, dada la restricción presupuestaria. \\ 
+\textit{Indica cuanto demando de acuerdo a los precios y mi ingreso.}\\\\
+Se obtiene de $max\;u(x_1,...,x_j) \text{ s.a }\; m=\sum_{i=1}^np_ix_i$ y se expresa como $x_j^M=x_j^M(m,p_1,...,p_n)$
+\subsection{Utilidad Indirecta}
+Se define funcion de utilidad indirecta $v$ como el nivel de utilidad mas alto  ye el individuo puede alcanzar dado su ingreso ($m$) y los precios del mercado ($p_1,...,p_n$). \\\\
+Tal que: $v(m,p_1,...,p_n)\equiv u(x_1^M,x_2^M,...,x_j^M)$\\
+\subsection{Demanda Hicksiana o compensada}
+Una demanda Hicksiana es cuando se minimiza el gasto para alcanzar un nivel de utilidad, ($\bar{u}$) y un nivel de precios ($p_1,...,p_n$), determinando la cantidad consumida de $x_j$ que permite alcanzar ese nivel de utilidad al minimo gasto. \\
+\textit{Indica cuanto consumo segun el menor gasto posible manteniendo una utilidad igual}\\\\
+Se obtiene de $min\; \sum_{i=1}^np_ix_i \;\text{ s.a }\; \bar{U}=u(x_1,...,x_j)$ y se expres como $x_j^H=x_j^H(\bar{u},p_1,...,p_n)$
+\newpage
+\subsection{Gasto Minimo}
+Indica el gasto minimo al que se puede alcanzar una utildiad ($\hat{u}$) a un nivel de precios ($p_1,...,p_n$)\\\\ 
+Tal que: $G^*(\bar{u},p_1,...,p_n)=\sum_{i=1}^np_ix_i^H$\\ 
+\subsection{Transformaciones de Dualidad}
+Existen formnas de llegar de una demanda marshalliana ($x_j^M$) a una hickisian ($x_j^H$) agilizando el proceso de los ejercicios. \\
+Entiendase $\vec{P}$ como el vector de precios ($p_1,...,p_n$)\\
+\subsubsection{Identidad de Roy}
+Sea $x_j^M(\vec{P},m)=\frac{\frac{\delta V(\vec{P,m})}{\delta p_j}}{\frac{\delta V(\vec{P,m})}{\delta m }}$\\
+\subsubsection{Lema de Shepard}
+Sea $\frac{\delta G^*(\vec{P,m)}}{\delta p_j}$
+\subsubsection{Igualdades}
+Obtendremos las siguientes igualdades que nos permitiran pasar de $x_j^M \iff x_j^H$. 
+\begin{align*}
+    G^*(\vec{P},V(\vec{P},m))=m\\
+    V(\vec{P},G^*(\vec{P},\bar{u}))=\bar{u}\\\\
+\end{align*}
+\subsubsection{Propiedades}
+$x_j^H=x_j^M(p_1,...,p_n;C^*(p_1,...,p_n,u_0))$\\\\
+De esta igualdad enontramos al Ecuacion de Slutzky que presenta:
+\begin{align*}
+    \frac{\delta x_j^H}{\delta p_j}=\frac{\delta x_j^M}{\delta p_j} + \frac{\delta x_j^M}{\delta m} \cdot x_j^H\\\\
+\end{align*}
+\begin{enumerate}
+        \item Efecto Sutitucion: $\frac{\delta x_j^H}{\delta p_j}$
+        \item Efecto Total: $\frac{\delta x_j^M}{\delta p_j}$
+        \item Efecto Ingreso: $\frac{\delta x_j^M}{\delta m} \cdot x_j^H$, \textbf{Este es negativo (-) siempre.}
+    \end{enumerate}
+\subsection{Elasticidades}
+Estos efectos tambien se pueden observar desde las elasticidades marshallianas y hicksianas. \\
+En forma de elasticidades tenemos:
+\begin{align*}
+    \text{Se multiplica un $\mathbf{\frac{p_j}{x_j}}$ a la ecuación de Slutzky y un "1" de $\mathbf{\frac{m}{m}}$}\\\\
+    \frac{\delta x_j^M}{\delta p_j}\cdot \mathbf{\frac{p_j}{x_j}}=\frac{\delta x_j^H}{\delta p_j}\cdot \mathbf{\frac{p_j}{x_j}}-\frac{\delta x_j^M}{\delta m} \cdot x_j^H\cdot \mathbf{\frac{m}{m}\cdot\frac{p_j}{x_j}}\\\\
+    \text{Ahora tenemos las formas de la elasticidad tal que:}\\\\
+    \eta_{jj}^M=\frac{\delta x_j^M}{\delta p_j}\cdot \mathbf{\frac{p_j}{x_j}};\quad \eta_{jj}^H=\frac{\delta x_j^H}{\delta p_j}\cdot \mathbf{\frac{p_j}{x_j}}; \quad \eta_{jm}^M=\frac{\delta x_j^M}{\delta m} \cdot \mathbf{\frac{m}{x_j}}; \quad \alpha_j=\cdot x_j^H\cdot\mathbf{\frac{p_j}{m}}\\\\
+    \text{$\alpha_j$ es el \% de ingreso que se gasta en $x_j$}\\\\
+    \text{Un bien se clasifica como normal o no normal segun la elasticidad ingreso, tal que:} \\ 
+    \eta_{jm}^M>0;\; \text{$x_j$ es un bien normal.}\\
+    \eta_{jm}^M<0;\; \text{$x_j$ es un bien inferior.}\\
+    \eta_{jm}^M=0;\; \text{$x_j$ es un bien neutro.}\\\\ 
+\end{align*}
+\subsection{Agregacion de Engel}
+Se define como la suma ponderada de las elasticidades ingreso de los bienes, esta debe ser 1. Ya que no todos los bienes pueden ser neutros ni inferiores. \\\\
+$$\frac{\delta \sum_{i=1}^np_ix_i}{\delta m}=\frac{\delta m}{\delta m}\Rightarrow \sum_{i=1}^np_i\frac{\delta x_i}{\delta m}=1$$\\\\
+La agregacion de Engel tambien se puede representar con elasticidades de la siguiente forma: \\\\
+$$\sum_{i=1}^np_i\frac{\delta x_i}{\delta m} \mathbf{\frac{m}{m} \cdot \frac{x_i}{x_i}}=1\Rightarrow \sum_{i=1}^n\frac{p_ix_i}{m}\cdot \eta_{im}^m=1\equiv \sum_{i=1}^n\alpha_i \cdot \eta_{im}^m=1$$\\\\
+\subsection{Agregación de Cournot}
+Se define como la suma ponderada de los cambios ponderados de n bienes, se deben contrarrestar para seguir usando todo el ingreso. 
+\begin{align*}
+    \sum_{i=1}^np_ix_i=m \Rightarrow \frac{\delta \sum_{i=1}^np_ix_i}{\delta p_j}=\frac{\delta m}{\delta p_j}\Rightarrow \frac{\delta (p_jx_j+\sum_{\substack{i=1\\i\neq j}}^np_ix_i)}{\delta p_j}=0\\\\
+    x_j+p_j\frac{\delta x_j}{\delta p_j}+\sum_{\substack{i=1\\i\neq j}}^np_i\frac{\delta x_i}{\delta p_j}=0\Rightarrow x_j+\sum_{i=1}^np_i\frac{\delta x_i}{\delta p_j}=0
+\end{align*}
+
+De igual manera, la agregacion de Cournot se puede representar con elasticidades: 
+$$x_j\mathbf{\frac{p_j}{m}}+\sum_{i=1}^n \frac{p_i}{\mathbf{x_i}}\frac{\delta x_i}{\delta p_j} \mathbf{{\frac{p_j x_j}{m}}}=0 \Rightarrow \alpha_j + \sum_{i=1}^n \alpha_i \cdot \eta_{ij}^M=0 $$
+\end{document}

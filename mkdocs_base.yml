@@ -32,7 +32,6 @@ markdown_extensions:
       permalink: true
       
 
-
 nav:
   - Inicio: index.md
   - Cursos:

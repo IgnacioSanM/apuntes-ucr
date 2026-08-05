@@ -1,17 +1,9 @@
-# Ignacio Sanabria
+# Notas UCR
 
-## Notas Economía
-
-Este sitio reúne mis apuntes elaborados con material propio y oficial, organizados por cursos. 
-
-Encontraras desde teoría hasta prácticas.
-
----
-
-
+ 
 
 ## Cursos
 
-Actualmente disponibles:
+- [Introducción a la Economía para Economistas](courses/intro_econ_econ/index.md)
 
-- [Microeconomía I](courses/microeconomia-i/index.md)
+---

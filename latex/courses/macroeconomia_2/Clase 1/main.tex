@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc} % Codificación de caracteres
+\usepackage[spanish]{babel} % Idioma del documento
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{pgfplots}
+\usepackage{tabularx}
+\usepackage[margin=1in]{geometry}
+\usepackage{svg}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\geometry{margin=1in}
+\onehalfspacing
+\pagestyle{fancy}
+\rhead{Macroeconomía II}
+\lhead{Clase 1}
+\title{Clase 1}
+\author{Ignacio Sanabria}
+\date{Agosto 2026}
+
+\begin{document}
+
+\maketitle
+\section{Conceptos}
+\begin{itemize}
+    \item Las economías suelen mantener una fluctuación entre la producción real, y la tendencia potencial. 
+    \item Cuando el PIB real es menor que el potencial, se conoce como resecion. 
+    
+\end{itemize}
+\section{Modelo Intertemporal de Consumo}
+Suponga: 
+\begin{itemize}
+    \item Economía de dotación, no hay producción.
+    \item Dos periodos $t\xrightarrow{}t+1$
+    \item Agente representativo, un hogar ($H$) con una dotación \{$Y_t,Y_{t+1}$\}, en términos reales. 
+    \item El numerario son las unidades de consumo. (unidad de medida).
+    \item Queremos modelar el $C_t$ tal que: $$C_t=f(y_t,y_{t+1},...)$$
+    \item Un mal modelo seria: $C_t=Y_t$ , dado que esta gastando todo su ingreso en el presente sin preveer el futuro. 
+    \item En $t$ el hogar decide $C_t$ , automáticamente decide $S_t$ (stock de ahorro) e intuitivamente $C_{t+1}$ 
+\end{itemize}
+Restrricciones presupuestarias: 
+\[\underbrace{C_t+S_t}_{Gastos} = \underbrace{Y_t}_{Ingresos} \]
+\begin{itemize}
+    \item Suponga que $S_{t-1}=0$
+    \item Sea $r_t=$ la tasa de interes real.
+    \item El hogar decide $S_t$ en el periodo $t$ y recibe $S_t+r_t\cdot S_t = (1+r_t)S_t $
+    \item Si $S_t<0 \xrightarrow{}$ deuda. 
+\end{itemize}
+Por lo tanto, en el periodo $t+1$, la restriccion presupuestaria es:
+%FOrma de igualar los Iguales, en linea, una al lado del otro segun igual%
+$$ C_t+S_t=Y_t \\ C_{t+1}+S_{t+1}=Y_{t+1}+(1+r_t)S_t $$
+
+Considere un hogar con preferencias: 
+$$U=u(c_t)+\beta \cdot u(c_{t+1})$$
+Tal que $u(\cdot)$ es una funcion con $$u`(\cdot ) >0\\u``(\cdot ) >0$$ 
+Con $0<\beta<1$ , un factor de cambio. \\
+Por lo tanto, podemos definir que cada agente busca: 
+\begin{align*}
+    \underbrace{max}_{\{ C_t, C_{t+1},S_t,S_{t+1}\}} u(C_t)+\beta\cdot (C_{t+1}) \\ \text{s.a} \\ C_t+S_t & =Y_t \\  C_{t+1}+S_{t+1} & =Y_{t+1}+(1+r_t)S_t 
+\end{align*}
+Note que $S_{t+1}>0$ , no va a elegirlo pues tiene $u`(\cdot )>0$ , es decir no le genera utilidad no consumir todo. \\
+Combinando las restricciones considerando esto, obtenemos: 
+$$C_{t}+\frac{C_{t+1}}{1+r_t}=Y_t+\frac{Y_{t+1}}{1+r_t}$$
+Donde $\frac{1}{1+r_t}$ es el factor de valor presente del modelo.\\  %Checar Notas% 
+Ademas considere que el consumo son variables endogenas, y el ingreso presente y futuro junto con la tasa d einteres son variables exogenas. \\
+
+\subsection{Resolviendo:}
+\[ 
+\begin{aligned}
+    \mathcal{L} &= u(c_t)+ \beta u(c_{t+1}) + \lambda [\;Y_t+\frac{Y_{t+1}}{1+r_t}-(C_{t}+\frac{C_{t+1}}{1+r_t})\; ] \\\\
+    &\text{CPO:}\quad\\
+    & \\  
+    [c_t]:\quad &u'(c_t)-\lambda=0  \\
+    [c_{t+1}]: \quad & u'\beta(c_{t+1})- \frac{\lambda }{1+r_t}=0\\
+    [\lambda]:\quad &  Y_t+\frac{Y_{t+1}}{1+r_t}=C_{t}+\frac{C_{t+1}}{1+r_t}
+\end{aligned}
+\]
+Por lo tanto igualando las COP podemos obtener la ecuacion de Euler de forma que: 
+\begin{align*}
+    \frac{u'(c_t)}{u'(c_{t+1})}={\beta}({1+r_t})
+\end{align*}
+
+\end{document} 

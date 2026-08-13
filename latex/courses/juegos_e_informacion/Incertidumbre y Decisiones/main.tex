@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc} % Codificación de caracteres
+\usepackage[spanish]{babel} % Idioma del documento
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{pgfplots}
+\usepackage{tabularx}
+\usepackage[margin=1in]{geometry}
+\usepackage{svg}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox{tadelis}{
+    colback=blue!5,
+    colframe=blue!60!black,
+    title=\textit{Game Theory, Steven Tadelis},
+    fonttitle=\bfseries,
+    boxrule=0.8pt,
+    arc=2mm
+}
+
+\newtcolorbox{comentarioprofe}{
+    colback=green!5,
+    colframe=green!50!black,
+    title=Comentario,
+    fonttitle=\bfseries,
+    boxrule=0.8pt,
+    arc=2mm
+}
+
+\newtcolorbox{importante}{
+    colback=orange!8,
+    colframe=orange!70!black,
+    title=Importante,
+    fonttitle=\bfseries,
+    boxrule=0.8pt,
+    arc=2mm
+}
+
+
+\geometry{margin=1in}
+\onehalfspacing
+\pagestyle{fancy}
+\rhead{Teoría de Juegos e Información}
+\lhead{Incertidumbre y Decisiones Racionales}
+\title{Tema 1. Incertidumbre y Decisiones Racionales}
+\author{Ignacio Sanabria}
+\date{Agosto 26}
+\begin{document}
+\maketitle
+
+\section{¿Que es la teoría de juegos?}
+La teoria de juegos busca explicar la forma en que se toman decisiones racionales en el día a día. \\
+\textbf{Agente Racional:} Un agente racional es aquel que busca siempre obtener su mayor utilidad. \\
+\subsection{Conceptos Básicos}
+\begin{itemize}
+    \item Triviales: no importan tanto, son superficiales.
+    \item Trascendentales: Afectan mis pagos esperados a futuro. 
+    \item \textbf{Supuestos:} vitales para explicar un modelo. Un exceso de supuestos convierte el modelo en inexacto. 
+\end{itemize}
+
+\section{Incertidumbre}
+Se platea un problema de decisión que incluye: 
+\begin{itemize}
+    \item Situaciones sobre las que se debe decidir. 
+    \item Conjunto de agentes económicos: Jugadores $J=\{\}$
+    \item Conjunto de acciones a tomar: Acciones $A=\{\}$
+    \item Conjunto de resultados: Resultados $R=\{\}$
+\end{itemize}
+Para que un problema de decisión tenga sentido, los agentes económicos deben tener preferencias sobre los resultados. \\
+Estas vienen dadas por: 
+\begin{enumerate}
+    \item $x\succeq y \xrightarrow{}$ Débilmente Preferido 
+    \item $x\succ y \xrightarrow{}$ Estrictamente preferido
+    \item $x\sim y \xrightarrow{}$ Indiferente
+\end{enumerate}
+
+\section{Axiomas de Preferencias}
+\begin{enumerate}
+    \item \textbf{Axioma de Completitud:} Los agentes económicos siempre son capaces de ordenar sobre dos resultados. \texttit{No pueden quedar indiferentes ante dos resultados.}
+    \item \textbf{Axioma de Transitividad:} Son capaces de ordenar todos los resultados. \textit{Garantiza que no existen contradicción de elecciones de los jugadores.} 
+\end{enumerate}
+\subsection{Paradoja de Condorcet 1785}
+Condorcet planteo que es posible al tener un grupo de agentes individualmente racionales, y ponerlos a tomar una decision en grupo, estos empiecen a tomar decisiones irracionales como grupo. \\
+Sea $J=\{A,B,C\}$ un conjunto de estudiantes que deben elegir si prefieren un quiz teorico ($t$), practico ($p$), o mixto ($m$). 
+\begin{align*}
+    \text{Con preferencias:}&\\\\
+    A:& \quad t\succ m\succ p \\
+    B: & \quad m \succ p \succ t \\
+    C: & \quad p \succ t \succ m 
+\end{align*}
+Si les pedimos votar obtendriamos: 
+\begin{align*}
+    \text{t vs m:}& \quad t \succ m \quad \textit{A favor de t: A,C}\\
+    \text{p vs m:}& \quad m \succ p \quad \textit{A favor de m: A,B}\\
+    \text{t vs p:}& \quad p \succ t \quad \textit{A favor de p: B,C}\\
+\end{align*}
+Sin embargo, esto rompe el \textbf{axioma de transitividad} dado que:
+\begin{align*}
+   \text{Por transitividad:}& \quad  t \succ m \succ p  \\
+   \text{pero la ultima votacion coloca:}&\quad  p \succ t \\
+   \therefore t \succ p \;\mathbf{\Rightarrow \Leftarrow} \;p \succ t
+\end{align*}
+
+\begin{tadelis}
+Según el libro, la ecuación de Euler caracteriza
+la senda óptima de consumo.
+\end{tadelis}
+\begin{comentarioprofe}
+El profesor enfatizó que esta condición solamente se cumple
+bajo determinadas condiciones de interioridad.
+\end{comentarioprofe}
+\begin{importante}
+La tasa de interés afecta el costo de oportunidad
+del consumo presente.
+\end{importante}
+
+\end{document}

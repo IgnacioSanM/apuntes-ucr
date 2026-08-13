@@ -10,6 +10,6 @@ Curso: **{COURSE}**
 
 <a href="../../pdf/{COURSE_SLUG}/{TOPIC_SLUG}.pdf" target="_blank">
 
-🔗 Abrir PDF
+Abrir 
 
 </a>

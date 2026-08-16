@@ -347,4 +347,16 @@ OUTPUT main.xdv
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
+INPUT ./figuras/juegos_1.drawio.svg
+INPUT ./figuras/juegos_1.drawio.svg
+INPUT ./figuras/juegos_1.drawio.svg
+INPUT ./figuras/juegos_2.drawio.svg
+INPUT ./figuras/juegos_2.drawio.svg
+INPUT ./figuras/juegos_2.drawio.svg
+INPUT ./figuras/juegos_3.drawio.svg
+INPUT ./figuras/juegos_3.drawio.svg
+INPUT ./figuras/juegos_3.drawio.svg
+INPUT ./figuras/juegos_4.drawio.svg
+INPUT ./figuras/juegos_4.drawio.svg
+INPUT ./figuras/juegos_4.drawio.svg
 INPUT main.aux

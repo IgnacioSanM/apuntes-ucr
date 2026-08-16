@@ -1,10 +1,10 @@
 # Fdb version 4
 ["xdvipdfmx"] 0 "main.xdv" "main.pdf" "main" 0 -1
-  "main.xdv" 1786654172.93363 87972 8bb672b5dbbab7f55988b739b7b6fe35 "xelatex"
+  "main.xdv" 1786768282.77565 87984 acdea366144851312034e1df5f607da2 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1786654172.40144 "main.tex" "main.xdv" "main" 1786654173.00119 2
+["xelatex"] 1786768282.23475 "main.tex" "main.xdv" "main" 1786768282.83697 2
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -212,8 +212,12 @@
   "/usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf" 1770478701 43630 e9fa012910491fe5ae08a72c3c2997a7 ""
   "/usr/local/texlive/2026/texmf-var/web2c/xetex/xelatex.fmt" 1774209578 5948559 ca66a59f4cdd4ce9709bed46018cb9cb ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
-  "main.aux" 1786654172.93261 2087 48b19222615de6ceb224c87411fc027c "xelatex"
-  "main.tex" 1786654082.55047 9556 20bbf40c1e3c4095694c6177809f1bec ""
+  "figuras/juegos_1.drawio.svg" 1786654658.78248 59131 7d9b166590ce188b55f490cc027d535a ""
+  "figuras/juegos_2.drawio.svg" 1786654593.70305 57071 cb8faef1035aac9ee28747dbd21c0178 ""
+  "figuras/juegos_3.drawio.svg" 1786654593.71832 91584 2f969916666ff2e9cedee14b21a39f87 ""
+  "figuras/juegos_4.drawio.svg" 1786654593.72041 95404 4639747049973350def6428a6c706656 ""
+  "main.aux" 1786768282.77453 2087 48b19222615de6ceb224c87411fc027c "xelatex"
+  "main.tex" 1786768244.95639 9564 0056f36da3ba6aa04ef6581bb20f4836 ""
   (generated)
   "main.aux"
   "main.log"

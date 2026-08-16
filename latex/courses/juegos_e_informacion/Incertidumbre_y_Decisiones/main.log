@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.22)  13 AUG 2026 14:49
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.22)  14 AUG 2026 22:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -886,7 +886,22 @@ File: l3backend-xetex.def 2025-10-09 L3 backend support: XeTeX
 \g__graphics_track_int=\count349
 \g__pdfannot_backend_int=\count350
 \g__pdfannot_backend_link_int=\count351
-) (./main.aux)
+) (./main.aux
+LaTeX Info: Redefining \. on input line 9.
+LaTeX Info: Redefining \% on input line 9.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 9.
+
+
+LaTeX Warning: Label `fig:placeholder' multiply defined.
+
+
+LaTeX Warning: Label `fig:placeholder' multiply defined.
+
+
+LaTeX Warning: Label `fig:placeholder' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
@@ -907,8 +922,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
 LaTeX Font Info:    ... okay on input line 57.
 LaTeX Info: Redefining \. on input line 57.
 LaTeX Info: Redefining \% on input line 57.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 57.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
@@ -969,15 +982,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--63
 [1
 
 ]
-! Undefined control sequence.
-l.88 ... de ordenar sobre dos resultados. \texttit
-                                                  {No pueden quedar indifere...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -987,7 +991,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2]
 
-! Package svg Error: File `juegos_1.drawio.svg' is missing.
+Package svg Warning: You didn't enable `shell escape' (or `write18')
+(svg)                so it wasn't possible to launch the Inkscape export
+(svg)                for `figuras/juegos_1.drawio.svg' on input line 117.
+
+
+! Package svg Error: File `juegos_1.drawio_svg-tex.pdf' is missing.
 
 See the svg package documentation for explanation.
 Type  H <return>  for immediate help.
@@ -995,11 +1004,30 @@ Type  H <return>  for immediate help.
                                                   
 l.117 ...5\linewidth]{figuras/juegos_1.drawio.svg}
                                                   
-There's no file `juegos_1.drawio.svg'
-in folder `figuras/'.
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/juegos_1.drawio_svg-tex.pdf'
+although `figuras/juegos_1.drawio.svg' was found.
 
 
-! Package svg Error: File `juegos_2.drawio.svg' is missing.
+! Package svg Error: File `juegos_1.drawio_svg-tex.pdf_tex' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117 ...5\linewidth]{figuras/juegos_1.drawio.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/juegos_1.drawio_svg-tex.pdf_tex'
+although `figuras/juegos_1.drawio.svg' was found.
+
+
+Package svg Warning: You didn't enable `shell escape' (or `write18')
+(svg)                so it wasn't possible to launch the Inkscape export
+(svg)                for `figuras/juegos_2.drawio.svg' on input line 146.
+
+
+! Package svg Error: File `juegos_2.drawio_svg-tex.pdf' is missing.
 
 See the svg package documentation for explanation.
 Type  H <return>  for immediate help.
@@ -1007,8 +1035,22 @@ Type  H <return>  for immediate help.
                                                   
 l.146 ...5\linewidth]{figuras/juegos_2.drawio.svg}
                                                   
-There's no file `juegos_2.drawio.svg'
-in folder `figuras/'.
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/juegos_2.drawio_svg-tex.pdf'
+although `figuras/juegos_2.drawio.svg' was found.
+
+
+! Package svg Error: File `juegos_2.drawio_svg-tex.pdf_tex' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.146 ...5\linewidth]{figuras/juegos_2.drawio.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/juegos_2.drawio_svg-tex.pdf_tex'
+although `figuras/juegos_2.drawio.svg' was found.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 141--148
@@ -1024,7 +1066,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [3]
 
-! Package svg Error: File `juegos_3.drawio.svg' is missing.
+Package svg Warning: You didn't enable `shell escape' (or `write18')
+(svg)                so it wasn't possible to launch the Inkscape export
+(svg)                for `figuras/juegos_3.drawio.svg' on input line 164.
+
+
+! Package svg Error: File `juegos_3.drawio_svg-tex.pdf' is missing.
 
 See the svg package documentation for explanation.
 Type  H <return>  for immediate help.
@@ -1032,8 +1079,22 @@ Type  H <return>  for immediate help.
                                                   
 l.164 ...4\linewidth]{figuras/juegos_3.drawio.svg}
                                                   
-There's no file `juegos_3.drawio.svg'
-in folder `figuras/'.
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/juegos_3.drawio_svg-tex.pdf'
+although `figuras/juegos_3.drawio.svg' was found.
+
+
+! Package svg Error: File `juegos_3.drawio_svg-tex.pdf_tex' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.164 ...4\linewidth]{figuras/juegos_3.drawio.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/juegos_3.drawio_svg-tex.pdf_tex'
+although `figuras/juegos_3.drawio.svg' was found.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1044,7 +1105,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4]
 
-! Package svg Error: File `juegos_4.drawio.svg' is missing.
+Package svg Warning: You didn't enable `shell escape' (or `write18')
+(svg)                so it wasn't possible to launch the Inkscape export
+(svg)                for `figuras/juegos_4.drawio.svg' on input line 175.
+
+
+! Package svg Error: File `juegos_4.drawio_svg-tex.pdf' is missing.
 
 See the svg package documentation for explanation.
 Type  H <return>  for immediate help.
@@ -1052,8 +1118,22 @@ Type  H <return>  for immediate help.
                                                   
 l.175 ...4\linewidth]{figuras/juegos_4.drawio.svg}
                                                   
-There's no file `juegos_4.drawio.svg'
-in folder `figuras/'.
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/juegos_4.drawio_svg-tex.pdf'
+although `figuras/juegos_4.drawio.svg' was found.
+
+
+! Package svg Error: File `juegos_4.drawio_svg-tex.pdf_tex' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175 ...4\linewidth]{figuras/juegos_4.drawio.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/juegos_4.drawio_svg-tex.pdf_tex'
+although `figuras/juegos_4.drawio.svg' was found.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1088,16 +1168,16 @@ L3 programming layer <2026-01-19>
  ***********
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 33246 strings out of 468168
- 839890 string characters out of 5432815
- 1399422 words of memory out of 5000000
- 61426 multiletter control sequences out of 15000+600000
+ 33267 strings out of 468168
+ 840865 string characters out of 5432815
+ 1399498 words of memory out of 5000000
+ 61447 multiletter control sequences out of 15000+600000
  635997 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,13n,118p,721b,615s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (7 pages, 87972 bytes).
+Output written on main.xdv (7 pages, 87984 bytes).

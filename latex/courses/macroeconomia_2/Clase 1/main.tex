@@ -10,12 +10,40 @@
 \usepackage{float}
 \usepackage{fancyhdr}
 \usepackage{setspace}
+
+
+\newtcolorbox{comentarioprofe}[1]{
+    colback=blue!5,
+    colframe=blue!50!black,
+    title=#1,
+    fonttitle=\bfseries,
+    boxrule=0.8pt,
+    arc=2mm
+}
+\newtcolorbox{ejemplo}[1]{
+    colback=gray!8,
+    colframe=gray!70!black,
+    title=#1,
+    fonttitle=\bfseries,
+    boxrule=0.8pt,
+    arc=2mm
+}
+\newtcolorbox{importante}[1]{
+    colback=orange!8,
+    colframe=orange!70!black,
+    title=#1,
+    fonttitle=\bfseries,
+    boxrule=0.8pt,
+    arc=2mm
+}
+
 \geometry{margin=1in}
 \onehalfspacing
 \pagestyle{fancy}
 \rhead{Macroeconomía II}
 \lhead{Clase 1}
 \title{Clase 1}
+\doctitle{Clase 1}
 \author{Ignacio Sanabria}
 \date{Agosto 2026}
 
@@ -36,34 +64,35 @@ Suponga:
     \item Agente representativo, un hogar ($H$) con una dotación \{$Y_t,Y_{t+1}$\}, en términos reales. 
     \item El numerario son las unidades de consumo. (unidad de medida).
     \item Queremos modelar el $C_t$ tal que: $$C_t=f(y_t,y_{t+1},...)$$
-    \item Un mal modelo seria: $C_t=Y_t$ , dado que esta gastando todo su ingreso en el presente sin preveer el futuro. 
+    \item Un mal modelo seria: $C_t=Y_t$ , dado que esta gastando todo su ingreso en el presente sin prever el futuro. 
     \item En $t$ el hogar decide $C_t$ , automáticamente decide $S_t$ (stock de ahorro) e intuitivamente $C_{t+1}$ 
 \end{itemize}
-Restrricciones presupuestarias: 
+Restricciones presupuestarias: 
 \[\underbrace{C_t+S_t}_{Gastos} = \underbrace{Y_t}_{Ingresos} \]
 \begin{itemize}
     \item Suponga que $S_{t-1}=0$
-    \item Sea $r_t=$ la tasa de interes real.
+    \item Sea $r_t=$ la tasa de interés real.
     \item El hogar decide $S_t$ en el periodo $t$ y recibe $S_t+r_t\cdot S_t = (1+r_t)S_t $
     \item Si $S_t<0 \xrightarrow{}$ deuda. 
 \end{itemize}
-Por lo tanto, en el periodo $t+1$, la restriccion presupuestaria es:
-%FOrma de igualar los Iguales, en linea, una al lado del otro segun igual%
-$$ C_t+S_t=Y_t \\ C_{t+1}+S_{t+1}=Y_{t+1}+(1+r_t)S_t $$
+Por lo tanto, en el periodo $t+1$, la restricción presupuestaria es:
+\begin{align*}
+    C_t+S_t & =Y_t \\ C_{t+1}+S_{t+1} & =Y_{t+1}+(1+r_t)S_t
+\end{align*}
 
 Considere un hogar con preferencias: 
 $$U=u(c_t)+\beta \cdot u(c_{t+1})$$
-Tal que $u(\cdot)$ es una funcion con $$u`(\cdot ) >0\\u``(\cdot ) >0$$ 
+Tal que $u(\cdot)$ es una función con $$u`(\cdot ) >0\\u``(\cdot ) >0$$ 
 Con $0<\beta<1$ , un factor de cambio. \\
 Por lo tanto, podemos definir que cada agente busca: 
 \begin{align*}
-    \underbrace{max}_{\{ C_t, C_{t+1},S_t,S_{t+1}\}} u(C_t)+\beta\cdot (C_{t+1}) \\ \text{s.a} \\ C_t+S_t & =Y_t \\  C_{t+1}+S_{t+1} & =Y_{t+1}+(1+r_t)S_t 
+    \underbrace{max}_{\{ C_t, C_{t+1},S_t,S_{t+1}\}} u(C_t)+\beta\cdot u(C_{t+1}) \\ \text{s.a} \\ C_t+S_t & =Y_t \\  C_{t+1}+S_{t+1} & =Y_{t+1}+(1+r_t)S_t 
 \end{align*}
 Note que $S_{t+1}>0$ , no va a elegirlo pues tiene $u`(\cdot )>0$ , es decir no le genera utilidad no consumir todo. \\
 Combinando las restricciones considerando esto, obtenemos: 
 $$C_{t}+\frac{C_{t+1}}{1+r_t}=Y_t+\frac{Y_{t+1}}{1+r_t}$$
 Donde $\frac{1}{1+r_t}$ es el factor de valor presente del modelo.\\  %Checar Notas% 
-Ademas considere que el consumo son variables endogenas, y el ingreso presente y futuro junto con la tasa d einteres son variables exogenas. \\
+Ademas considere que el consumo son variables endógenas, y el ingreso presente y futuro junto con la tasa de interés son variables exógenas. \\
 
 \subsection{Resolviendo:}
 \[ 
@@ -76,9 +105,130 @@ Ademas considere que el consumo son variables endogenas, y el ingreso presente y
     [\lambda]:\quad &  Y_t+\frac{Y_{t+1}}{1+r_t}=C_{t}+\frac{C_{t+1}}{1+r_t}
 \end{aligned}
 \]
-Por lo tanto igualando las COP podemos obtener la ecuacion de Euler de forma que: 
+Por lo tanto igualando las COP podemos obtener la ecuación de Euler de forma que: 
 \begin{align*}
     \frac{u'(c_t)}{u'(c_{t+1})}={\beta}({1+r_t})
 \end{align*}
 
-\end{document} 
+\begin{ejemplo}{Ejemplo 1}
+    Suponga que $u(c)=log(c)$ tal que: $u'(c)=\frac{1}{c}$\\
+    Las condiciones de optimalidad: 
+    \begin{align}
+        \frac{C_{t+1}}{1+r_t}=\beta(1+r_t)\\
+        C_{t}+\frac{C_{t+1}}{1+r_t}=Y_t+\frac{Y_{t+1}}{1+r_t}
+    \end{align}
+    Al inyectar (1) en (2). \\
+    $$ C_t=(\frac{1}{1+\beta})[Y_t+\frac{Y_{t+1}}{1+r_t}] $$
+    El hogar consume una fraccion $\frac{1}{1+\beta}<1$ del valor del flujo de ingreso. Esto se conoce como \textbf{propensión marginal a consumir.} 
+\end{ejemplo}
+
+
+\subsection{Ecuación de Euler}
+La ecuación de Euler básica es: 
+$$u'(c_t)=\beta(1+r_t)+u'(c_{t+1})$$
+Comportamiento de la ecuación de Euler: 
+\begin{itemize}
+    \item $\beta(1+r_t)=1$, podemos definir que: $u'(c_t)=u'(c_{t+1})$
+    \item $\beta(1+r_t)<1$, podemos definir que: $u'(c_t)<u'(c_{t+1})\Rightarrow{} c_t>c_{t+1}$ \\\textit{En este caso la impaciencia $\beta$ domina la fuerza para postergar el consumo}
+    \item $\beta(1+r_t)>1$, podemos definir que: $u'(c_t)>u'(c_{t+1})\Rightarrow{} c_t<c_{t+1}$
+\end{itemize}
+
+\subsection{Critica a Keynes}
+\begin{comentarioprofe}{Critica}
+    Según Keynes (1936) el consumo optimo se definía como $C_t=c_0+c_1Y_t$. \\
+    Hecho estilizado (hasta 80s): $\frac{C_t}{Y_t} \sim 0.6-0.7$ \\
+    Sin embargo, con preferencias logarítmicas sabemos que: 
+    $$C_t=(\frac{1}{1+\beta})[Y_t+\frac{Y_{t+1}}{1+r_t}]$$
+    Con esto yo puedo prever el accionar a futuro, por eventualidades o cambios abruptos en la tasa de interés ($r_t$)\\ 
+    En este caso $PMC=\frac{1}{1+\beta}$, es decir se necesitan hogares muy impacientes para tener un mayor consumo. \\
+    Si tomamos $\beta(1+r_t)=1$, sabemos que: 
+    $$C_t=(\frac{1+r_t}{2+r_t})[Y_t+\frac{Y_{t+1}}{1+r_t}]$$ 
+    donde el $PMC=\frac{1+r_t}{2+r_t}$
+\end{comentarioprofe}
+
+\begin{ejemplo}{Ejemplo 2}
+    Suponga que posee un modelo $t+1$, tal que su linea de vida se ve: 
+    \begin{figure} [H]
+        \centering 
+        \includesvg[width=0.7\linewidth]{figuras/clase_1/macro_1.drawio.svg}
+        \label{fig:placeholder}
+    \end{figure}
+    Restricciones presupuestarias:
+    \begin{align*}
+        C_t+S_t=&Y_t\\
+        C_{t+1}+S_{t+1}=&Y_{t+1}+(1+r_t)s_t\\ 
+        C_{t+2}+S_{t+2}=&Y_{t+2}+(1+r_{t+2})S_{t+1}\\
+        \vdots \\ 
+        C_{t+T}+S_{t+T}=&Y_{t+T}+(1+r_{t+T-1})S_{t+T-1}\\\\
+        \text{Condición terminal:}\; S_{t+T}&=0
+    \end{align*}
+    Para cualquier periodo $j$ tenemos: 
+    \begin{align*}
+        C_{t+j}+S_{t+j} =& Y_{t+j}+(1+r_{t+j-1})S_{t+j-1}\\
+        C_{t+j}+\underbrace{S_{t+j}-S_{t+j-1}}_{\textbf{Flujo de ahorro}} =&Y_{t+j}+\underbrace{(r_{t+j-1})S_{t+j-1}}_{\textbf{Renta Ahorro}}
+    \end{align*}
+    El flujo de ahorro y la renta del ahorro a lo largo del tiempo se puede ver de la siguiente manera:
+    \begin{figure} [H]
+        \centering 
+        \includesvg[width=0.8\linewidth]{figuras/clase_1/macro_2.drawio.svg}
+        \label{fig:placeholder}
+    \end{figure}
+    \end{ejemplo}
+    \newpage
+    \begin{ejemplo}{Ejemplo 2}
+        En el flujo del tiempo se pueden consolidar las restricciones presupuestarias y asumiendo que $r_{t+j}=r\; \forall\; j=0,1,...,T$ \\
+        Podemos concretar que: 
+        \begin{align*}
+            C_t &=\frac{C_{t+1}}{1+r}+\frac{C_{t+2}}{(1+r)^2}+...+ \frac{C_{t+T}}{(1+r)^T}=Y_t+\frac{Y_{t+1}}{1+r}+...+\frac{Y_{t+T}}{(1+r)^T} \\\\
+            &\text{Equivalente a la}\;\textbf{Restricción Presupuestaria Intertemporal (RPI):}\\\\
+            &\sum^T_{j=0}\frac{C_{t+1}}{(1+r)^j}=\sum^T_{j=0}\frac{Y_{t+1}}{(1+r)^j}\\\\
+            &\textbf{Riqueza o Ingreso Permanente:}\; =W=\sum^T_{j=0}\frac{Y_{t+1}}{(1+r)^j}
+        \end{align*}
+        Si intentamos maximizar el problema de utilidad para $T$ periodos obtenemos: 
+        \begin{align*}
+            \underbrace{max}_{ \{ C_{t+j},Y_j\}\ }  u(C_t) + \beta \;u(C_{t+1})+\beta^2 \;u(C_{t+2})+...+\beta^T \;u(C_{t+T})\\
+            \text{Esto es equivalente a:}\\ \sum_{j=0}^T\beta^j u(C_{t+j})\quad \text{s.a}\quad \sum^T_{j=0}\frac{C_{t+1}}{(1+r)^j}=\sum^T_{j=0}\frac{Y_{t+1}}{(1+r)^j}\\\\
+            \text{En un lagrangiano se debería derivar con respecto a cada $\beta$}\\ \text{En este caso existirían $T$ Ecuaciones de Euler}
+        \end{align*}
+    \end{ejemplo}
+\newpage
+Ahora suponga que $\beta(1+r_t)=1$, en este caso como vimos con anterioridad el consumo sera constante durante todo su ciclo de vida. Por lo cual podríamos definir un $\bar {C}$. 
+\begin{align*}
+    \text{Suponga que:}\; \beta(1+r_t)=1 \\
+    \text{Por lo tanto definimos:} \\
+    C_t=C_{t+1}=&C_{t+2}=...=C_{t+T}=\mathbf{\bar{C}}\\\\
+    \text{Ahora cambiemos esto en nuestra }\textbf{RPI}\\\\
+    \sum^T_{j=0}\frac{C_{t+1}}{(1+r)^j}=\sum^T_{j=0}\frac{Y_{t+1}}{(1+r)^j} & \Rightarrow{} \sum^T_{j=0}\frac{\mathbf{\bar{C}}}{(1+r)^j}=\sum^T_{j=0}\frac{Y_{t+1}}{(1+r)^j} \\\\
+    \mathbf{\bar{C}} \cdot \sum^T_{j=0}\frac{1}{(1+r)^j}=\sum^T_{j=0}\frac{Y_{t+1}}{(1+r)^j} & \Rightarrow{} \mathbf{\bar{C}} \cdot \sum^T_{j=0} \beta^j=\sum_{j=0}^T \beta^j Y_{t+j}\\\Rightarrow{} \mathbf{\bar{C}} \cdot (\frac{1-\beta^{T+1}}{1-\beta})=\sum_{j=0}^T \beta^j Y_{t+j} \\\\ 
+    \therefore \mathbf{\bar{C}} = (\frac{1-\beta^{T+1}}{1-\beta}) \sum_{j=0}^T \beta^j Y_{t+j}\equiv & (\frac{1-\beta^{T+1}}{1-\beta}) \cdot W
+\end{align*}
+De aqui podemos discernir también la PMC del individuo a lo largo del tiempo, ya que observamos que: 
+$$\frac{\delta C_t}{\delta Y_t}=\frac{\delta \bar{C}}{\delta Y_t}=\frac{1-\beta^{T+1}}{1-\beta}\; \in (0,1)$$
+\begin{importante}{Concluimos}
+    \begin{itemize}
+        \item Los hogares toman decisiones de consumo en función de su ingreso permanente, \textit{Hipótesis de Renta Permanente de Friedman}. 
+        \item La PMC es \textbf{menor} entre mayor sea $T$
+        \item $\frac{\delta C_t}{\delta Y_{t+1}}=\frac{\delta \bar{C}}{\delta Y_{t+1}}=\beta^j(\frac{1-\beta}{1-\beta^{t+1}})$ \\ 
+        Choque de ingreso futuro mueve el consumo presente. pero entre mas $\underbrace{\text{alejado del presente}}_{j\;\text{mas alto}},\quad  \underbrace{\text{menos lo mueve}}_{\frac{\delta \bar{C}}{\delta Y_{t+1}}\;\text{es menor}}.$\\
+    \end{itemize}
+\end{importante}
+\subsection{Tipos de Choque}
+Note que: $d\bar{C}=(\frac{1-\beta^{T+1}}{1-\beta})(dY_t+\beta \;dY_{t+1}+\beta ^2 \; dY_{t+2}+...+\beta ^T\; dY_{t+T})$\\
+De aquí podemos partir a clasificar los choques, por ejemplo> 
+\subsubsection{Choque Completamente Transitorio}
+$dY_t \neq 0, \; dY_{t+j}=0 \quad \forall j=1,2,...,T$\\
+Implicando entonces que: $$d\bar{C}=(\frac{1-\beta^{T+1}}{1-\beta}) dY_t$$\\ 
+es decir $$\frac{d\bar{C}}{dY_t}=(\frac{1-\beta^{T+1}}{1-\beta})=\textbf{PMC}$$
+\subsubsection{Choque Completamente Permanente}
+$dY_t \neq 0, \; dY_t=dY_{t+1}= dY_{t+2}=...= dY_{t+T}$\\
+Implicando entonces que: 
+\begin{align*}
+    d\bar{C}=(\frac{1-\beta^{T+1}}{1-\beta}) (dY_t+\beta \;dY_t+\beta ^2 \; dY_t+...+\beta ^T\; dY_t)\\
+    d\bar{C}=(\frac{1-\beta^{T+1}}{1-\beta})\;dY_T (1+\beta+\beta^2+...+\beta^T)\\
+    d\bar{C}=(\frac{1-\beta^{T+1}}{1-\beta})\;dY_T \sum_{j=0}^T\beta^j\Rightarrow{}d\bar{C}=(\frac{1-\beta^{T+1}}{1-\beta})\;dY_T\frac{1-\beta}{1-\beta^{T+1}}\\ 
+    d\bar{C}=dY_t\\\\
+    \therefore \frac{ d\bar{C}}{dY_t}=1 =\textbf{PMC}
+\end{align*}
+De aqui podemos concluir que: \textbf{entre más persistente el choque de ingreso, más fuerte es la respuesta del consumo}. 
+
+\end{document}

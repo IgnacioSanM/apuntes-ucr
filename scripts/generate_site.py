@@ -87,7 +87,6 @@ def read_document(tex_file: Path):
     course_folder = document_folder.parent
 
     course_slug = course_folder.name
-    document_slug = document_folder.name
     course_file = course_folder / "course.tex"
     if not course_file.exists():
         print(f"⚠ Se omitió {course_folder.name}: falta course.tex")
@@ -98,8 +97,10 @@ def read_document(tex_file: Path):
 
     course = extract_command(course_text, "course")
     title = extract_command(tex_text, "doctitle")
+    if not title:
+        title = extract_command(tex_text, "title")
     author = extract_command(tex_text, "author")
-
+    document_slug = slugify(title)
     return Document(
         course=course,
         course_slug=course_slug,
@@ -144,7 +145,7 @@ def write_course_page(course_slug: str, course_name: str, docs: list[Document]):
     output_dir.mkdir(parents=True, exist_ok=True)
 
     index = output_dir / "index.md"
-
+    name= course_slug.replace("_", " ").title()
     lines = []
 
     lines.append(f"# {course_name}")
@@ -156,13 +157,13 @@ def write_course_page(course_slug: str, course_name: str, docs: list[Document]):
 
     for doc in docs:
 
-        lines.append(f"### 📄 {doc.title}")
+        lines.append(f"###  {doc.title}")
         lines.append("")
         lines.append(f"**Autor:** {doc.author}")
         lines.append("")
         pdf_name = doc.slug + ".pdf"
         lines.append(
-            f"[📥 Abrir PDF](../../pdf/{course_slug}/{pdf_name})"
+            f"[Abrir {name}](../../pdf/{course_slug}/{pdf_name})"
         )
         lines.append("")
         lines.append("---")

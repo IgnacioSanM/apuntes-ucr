@@ -1,6 +1,6 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.22)  5 AUG 2026 14:17
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.22)  17 AUG 2026 12:00
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
@@ -679,13 +679,30 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
 (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+runsystem(uname -s > "main.w18")...executed.
+
+ (./main.w18)
+runsystem(rm -- "main.w18")...executed.
+
 )
 \c@svg@param@lastpage=\count328
 \svg@box=\box69
 \c@svg@param@currpage=\count329
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/transparent/transparent.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/transparent/transparent.sty
 Package: transparent 2025-06-23 v1.6 Transparency with color stacks
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/transparent/transparent-nometadat
@@ -775,7 +792,9 @@ your preamble.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+(|'inkscape' -V )
 LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
+
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -800,185 +819,13 @@ l.52 ...inewidth]{figuras/curva_indf_1.drawio.svg}
 There's no file `curva_indf_1.drawio.svg'
 in folder `figuras/'.
 
-
-! Package svg Error: File `TMS_1.drawio.svg' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.64 ...h=0.5\linewidth]{figuras/TMS_1.drawio.svg}
-                                                  
-There's no file `TMS_1.drawio.svg'
-in folder `figuras/'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--66
-
- []
-
-[2] [3]
-
-! Package svg Error: File `restric_presup_1.svg' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.84 ...=0.50\linewidth]{figuras/restric_presup_1}
-                                                  
-There's no file `restric_presup_1.svg'
-in folder `figuras/'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--86
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--109
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 110--130
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--135
-
- []
-
-
-Overfull \hbox (1.45459pt too wide) in paragraph at lines 132--135
-\TU/lmr/m/n/10 Se obtiene de $\OML/cmm/m/it/10 max u\OT1/cmr/m/n/10 (\OML/cmm/m
-/it/10 x[]; :::; x[]\OT1/cmr/m/n/10 )[] \OML/cmm/m/it/10 m \OT1/cmr/m/n/10 = []
-[] \OML/cmm/m/it/10 p[]x[]$ \TU/lmr/m/n/10 y se expresa como $\OML/cmm/m/it/10 
-x[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m; 
-p[]; :::; p[]\OT1/cmr/m/n/10 )$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 136--138
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 136--138
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--142
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 144--146
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 144--146
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--149
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--162
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 185--186
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 185--186
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 186--188
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 186--188
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 186--188
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
-
- []
-
-[7] [8] (./main.aux
-LaTeX Info: Redefining \. on input line 8.
-LaTeX Info: Redefining \% on input line 8.
-)
- ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2026-01-19>
- ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ 
 Here is how much of TeX's memory you used:
- 26100 strings out of 468168
- 660822 string characters out of 5432815
- 1185121 words of memory out of 5000000
- 54378 multiletter control sequences out of 15000+600000
- 635104 words of font info for 83 fonts, out of 8000000 for 9000
+ 26170 strings out of 468168
+ 662607 string characters out of 5432815
+ 1179121 words of memory out of 5000000
+ 54443 multiletter control sequences out of 15000+600000
+ 634129 words of font info for 74 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,14n,118p,721b,302s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-Output written on main.xdv (8 pages, 60072 bytes).
+ 99i,12n,118p,721b,273s stack positions out of 10000i,1000n,20000p,200000b,200000s
+Output written on main.xdv (1 page, 10556 bytes).

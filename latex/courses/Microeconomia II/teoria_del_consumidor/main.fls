@@ -243,6 +243,17 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/tools/shellesc.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/catchfile/catchfile.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/catchfile/catchfile.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifluatex.sty
+INPUT /usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifluatex.sty
+INPUT ./main.w18
+INPUT ./main.w18
+INPUT main.w18
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/transparent/transparent.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/transparent/transparent.sty
 INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/transparent/transparent-nometadata.sty
@@ -255,6 +266,7 @@ INPUT ./main.aux
 INPUT ./main.aux
 INPUT main.aux
 OUTPUT main.aux
+INPUT 'inkscape' -V 
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
@@ -289,7 +301,3 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm1
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 OUTPUT main.xdv
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
-INPUT main.aux

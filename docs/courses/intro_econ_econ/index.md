@@ -2,10 +2,10 @@
 
 ## Documentos
 
-### 📄 Problema Económico
+###  Problema Económico
 
 **Autor:** Ignacio Sanabria
 
-[📥 Abrir PDF](../../pdf/intro_econ_econ/problema_economico.pdf)
+[Abrir Problema Económico](../../pdf/intro_econ_econ/problema_economico.pdf)
 
 ---

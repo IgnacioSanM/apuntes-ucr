@@ -2,10 +2,10 @@
 
 ## Documentos
 
-### 📄 
+###  Clase 1
 
 **Autor:** Ignacio Sanabria
 
-[📥 Abrir PDF](../../pdf/macroeconomia_2/Clase 1.pdf)
+[Abrir Clase 1](../../pdf/macroeconomia_2/clase_1.pdf)
 
 ---

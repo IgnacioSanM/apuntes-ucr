@@ -51,165 +51,164 @@
 \rhead{Teoría de Juegos e Información}
 \lhead{Incertidumbre y Decisiones Racionales}
 \title{Tema 1. Incertidumbre y Decisiones Racionales}
-\doctitle{Tema 1. Incertidumbre y Decisiones Racionales}
 \author{Ignacio Sanabria}
 \date{Agosto 26}
 \begin{document}
-\maketitle
+    \maketitle
 
-\section{¿Que es la teoría de juegos?}
-La teoria de juegos busca explicar la forma en que se toman decisiones racionales en el día a día. \\
-\textbf{Agente Racional:} Un agente racional es aquel que busca siempre obtener su mayor utilidad. \\
-\subsection{Conceptos Básicos}
-\begin{itemize}
-    \item Triviales: no importan tanto, son superficiales.
-    \item Trascendentales: Afectan mis pagos esperados a futuro. 
-    \item \textbf{Supuestos:} vitales para explicar un modelo. Un exceso de supuestos convierte el modelo en inexacto. 
-\end{itemize}
+    \section{¿Que es la teoría de juegos?}
+    La teoria de juegos busca explicar la forma en que se toman decisiones racionales en el día a día. \\
+    \textbf{Agente Racional:} Un agente racional es aquel que busca siempre obtener su mayor utilidad. \\
+    \subsection{Conceptos Básicos}
+    \begin{itemize}
+        \item Triviales: no importan tanto, son superficiales.
+        \item Trascendentales: Afectan mis pagos esperados a futuro. 
+        \item \textbf{Supuestos:} vitales para explicar un modelo. Un exceso de supuestos convierte el modelo en inexacto. 
+    \end{itemize}
 
-\section{Basicos de Incertidumbre}
-Se platea un problema de decisión que incluye: 
-\begin{itemize}
-    \item Situaciones sobre las que se debe decidir. 
-    \item Conjunto de agentes económicos: Jugadores $J=\{\}$
-    \item Conjunto de acciones a tomar: Acciones $A=\{\}$
-    \item Conjunto de resultados: Resultados $R=\{\}$
-\end{itemize}
-Para que un problema de decisión tenga sentido, los agentes económicos deben tener preferencias sobre los resultados. \\
-Estas vienen dadas por: 
-\begin{enumerate}
-    \item $x\succeq y \xrightarrow{}$ Débilmente Preferido 
-    \item $x\succ y \xrightarrow{}$ Estrictamente preferido
-    \item $x\sim y \xrightarrow{}$ Indiferente
-\end{enumerate}
+    \section{Basicos de Incertidumbre}
+    Se platea un problema de decisión que incluye: 
+    \begin{itemize}
+        \item Situaciones sobre las que se debe decidir. 
+        \item Conjunto de agentes económicos: Jugadores $J=\{\}$
+        \item Conjunto de acciones a tomar: Acciones $A=\{\}$
+        \item Conjunto de resultados: Resultados $R=\{\}$
+    \end{itemize}
+    Para que un problema de decisión tenga sentido, los agentes económicos deben tener preferencias sobre los resultados. \\
+    Estas vienen dadas por: 
+    \begin{enumerate}
+        \item $x\succeq y \xrightarrow{}$ Débilmente Preferido 
+        \item $x\succ y \xrightarrow{}$ Estrictamente preferido
+        \item $x\sim y \xrightarrow{}$ Indiferente
+    \end{enumerate}
 
-\section{Axiomas de Preferencias}
-\begin{enumerate}
-    \item \textbf{Axioma de Completitud:} Los agentes económicos siempre son capaces de ordenar sobre dos resultados. \\ \textit{No pueden quedar indiferentes ante dos resultados.}\;
-    \item \textbf{Axioma de Transitividad:} Son capaces de ordenar todos los resultados. \textit{Garantiza que no existen contradicción de elecciones de los jugadores.} 
-\end{enumerate}
-\subsection{Paradoja de Condorcet 1785}
-Condorcet planteo que es posible al tener un grupo de agentes individualmente racionales, y ponerlos a tomar una decision en grupo, estos empiecen a tomar decisiones irracionales como grupo. \\
-Sea $J=\{A,B,C\}$ un conjunto de estudiantes que deben elegir si prefieren un quiz teorico ($t$), practico ($p$), o mixto ($m$). 
-\begin{align*}
-    \text{Con preferencias:}&\\\\
-    A:& \quad t\succ m\succ p \\
-    B: & \quad m \succ p \succ t \\
-    C: & \quad p \succ t \succ m 
-\end{align*}
-Si les pedimos votar obtendriamos: 
-\begin{align*}
-    \text{t vs m:}& \quad t \succ m \quad \textit{A favor de t: A,C}\\
-    \text{p vs m:}& \quad m \succ p \quad \textit{A favor de m: A,B}\\
-    \text{t vs p:}& \quad p \succ t \quad \textit{A favor de p: B,C}\\
-\end{align*}
-Sin embargo, esto rompe el \textbf{axioma de transitividad} dado que:
-\begin{align*}
-   \text{Por transitividad:}& \quad  t \succ m \succ p  \\
-   \text{pero la ultima votacion coloca:}&\quad  p \succ t \\
-   \therefore t \succ p \;\mathbf{\Rightarrow \Leftarrow} \;p \succ t
-\end{align*}
-
-\section{Decisiones}
-A lo largo del curso las decisiones se veran representadas en arboles de decision, tal cual se muestra acontinuacion: 
-\begin{figure} [H]
-    \centering
-    \includesvg[width=0.5\linewidth]{figuras/juegos_1.drawio.svg}
-    \caption{Arbol de Decision}
-    \label{fig:placeholder}
-\end{figure}
-\subsection{Paradigma de la eleccion racional}
-Elegir la mejor accion del conjuntos $A$ dadas su preferencias y restricciones. 
-Tal que parten de $A\rightarrow X \Rightarrow$ Preferencias al respecto. \\
-Para esto se establece una funcion de pago que viene a represetar la asociacion de preferencias de la eleccion. \\
-La funcion de pagos esta dada por: $$v(a)=u(x(a))$$
-
-\section{Incertidumbre}
-Los resultados estocasticos hacen rererencia a la incertidumbre asociada a cada resultado. \\
-\textbf{Supuestos}
-\begin{enumerate}
-    \item Cada resultado se puede determinar objetivamente. 
-    \item Los tomadores de decisiones se interesan en el resultado, no en el proceso para llegar a el. 
-    \item $X\in R$, siendo $R$ el conjunto finito de resultados. 
-    \item cada posible resultado esta presente en la probablidad. 
-\end{enumerate}
-A continuacion iremos trabajando un ejemplo con diversos conceptos relacionados. 
-\begin{ejemplo}
-    \textbf{Ejemplo Proyecto de Investigacion y Desarrollo Parte 1}
-    Una empresa $E$ debe elegir si realizar ($g$) o no realizar ($s$) un proyecto de investigacion para mejorar su negocio. Ademas saben que en sus resultados $X$ obtienen un $10$ si resulta exitoso, y $0$ si no. \\
-    Por lo tanto su conjunto de acciones ($A$) y resultados ($X$) es:
-    $$A=\{g,s\} \quad X=\{0,10\}$$
-    Ademas se sabe que si deciden realizarlo $g$ tienen un 10\% de probabilidad de obtener $10$, y si deciden no realizarlo $s$ tienen un 50\% de obtener 10. \\
-    Un arbol de decisiones se veria de la siguiente manera: \\
-    \begin{figure} [H]
-        \centering
-        \includesvg[width=0.5\linewidth]{figuras/juegos_2.drawio.svg}
-        \label{fig:placeholder}
-    \end{figure}
-\end{ejemplo}
-\subsection{lotería Simple}
-Una lotería simple esta dada por un conjunto de resultados $X=\{x_1,x_2,...,x_n\}$, se define una probabilidad  $P=\{p(x_1),p(x_2),...,p(x_n)\}$ tal que $$\sum_{k=1}^np(x_k)=1$$
-La importancia de las loterías es marcar la presencia de la naturaleza en la toma de decisiones, estas al trabajar con probabilidades se basan en ideas basicas de las distribuciones de probabilidad. 
-\subsubsection{Teorema de Bayes}
-Sea $\{A_1,A_2,...,A_n\}$ un conjunto de eventos mutuamente excluyentes y exhaustivos, donde $P(A_i)>0$. Y sea B un suceso del que se conocen sus probabilidades condicionales $P(B|A_i)$. \\
-Entonces el teorema de Bayes muestra que: 
-$$P(A_i|B)=\frac{P(B|A_i)P(A)}{P(B)}$$
-\subsection{lotería Compuesta}
-Cuando se tiene una lotería sobre una lotería, se clasifica como lotería compuesta. 
-\begin{ejemplo}
-    \textbf{Ejemplo Proyecto de Investigación y Desarrollo. Parte 2}\\
-    En este caso estamos cargando de probabilidad a la segunda lotería, podemos ver que la parte donde la naturaleza ($N$), ahora parte de nuevas probabilidades. 
-    \begin{figure} [H]
-        \centering
-        \includesvg[width=0.4\linewidth]{figuras/juegos_3.drawio.svg}
-        \label{fig:placeholder}
-    \end{figure}
-\end{ejemplo}
-\subsubsection{Lotería Simple Continua}
-Sobre el intervalo $X=\{ {{\underline{x}},\bar{x}}\}$ que viene de una Funcion de Distribucion Acumulada (FDA) $F:X\rightarrow[0,1]$ donde $F(\hat{x})=P(x \leq \hat{x})$ es la probabilidad de que un resultado sea menor o igual a $\hat{x}$. 
-\begin{ejemplo}
-    \textbf{Ejemplo Proyecto de Investigacion y Desarrollo. Parte 3}\\
-    Ahora asumamos que existe un costo ($c$) por realizar ($g$) el proyecto de investigacion, de forma que nuestro arbol de decisiones se veria asi. 
-     \begin{figure} [H]
-        \centering
-        \includesvg[width=0.4\linewidth]{figuras/juegos_4.drawio.svg}
-        \label{fig:placeholder}
-    \end{figure}
-    En este caso podemos ver la utilidad esperada para determinar cual es el $C$ que pueda tomar la empresa. 
+    \section{Axiomas de Preferencias}
+    \begin{enumerate}
+        \item \textbf{Axioma de Completitud:} Los agentes económicos siempre son capaces de ordenar sobre dos resultados. \\ \textit{No pueden quedar indiferentes ante dos resultados.}\;
+        \item \textbf{Axioma de Transitividad:} Son capaces de ordenar todos los resultados. \textit{Garantiza que no existen contradicción de elecciones de los jugadores.} 
+    \end{enumerate}
+    \subsection{Paradoja de Condorcet 1785}
+    Condorcet planteo que es posible al tener un grupo de agentes individualmente racionales, y ponerlos a tomar una decision en grupo, estos empiecen a tomar decisiones irracionales como grupo. \\
+    Sea $J=\{A,B,C\}$ un conjunto de estudiantes que deben elegir si prefieren un quiz teorico ($t$), practico ($p$), o mixto ($m$). 
     \begin{align*}
-        \pi_s&=0.5\cdot 10+0.5\cdot 0=5\\ \\
-        \pi_g&=0.625[0.9\cdot(10-c)+0.1(0-c)]+0.375[0.5(10-c)+0.1(0-c)]\\
-        \pi_g&=7.5-c\\
-        & \text{Para ser congruentes se debe cumplir que:} \\ \pi_g&>\pi_s \\ 7.5-c&>5 \\ 2.5&>c 
+        \text{Con preferencias:}&\\\\
+        A:& \quad t\succ m\succ p \\
+        B: & \quad m \succ p \succ t \\
+        C: & \quad p \succ t \succ m 
     \end{align*}
-    Por lo tanto descubrimos que el costo minimo para decidir hacer o no la investigacion es $2.5$. 
-\end{ejemplo}
+    Si les pedimos votar obtendriamos: 
+    \begin{align*}
+        \text{t vs m:}& \quad t \succ m \quad \textit{A favor de t: A,C}\\
+        \text{p vs m:}& \quad m \succ p \quad \textit{A favor de m: A,B}\\
+        \text{t vs p:}& \quad p \succ t \quad \textit{A favor de p: B,C}\\
+    \end{align*}
+    Sin embargo, esto rompe el \textbf{axioma de transitividad} dado que:
+    \begin{align*}
+    \text{Por transitividad:}& \quad  t \succ m \succ p  \\
+    \text{pero la ultima votacion coloca:}&\quad  p \succ t \\
+    \therefore t \succ p \;\mathbf{\Rightarrow \Leftarrow} \;p \succ t
+    \end{align*}
 
-\section{Axioma de Independencia}
-Se consideran cuatro loterias, tal que: 
-\begin{itemize}
-    \item Loteria I: resultados R con probabilidad de $1-\alpha$ y P con probabilidad Q. 
-    \item Loteria II: resultados R con probabilidad de $1-\alpha$ y P con probabilidad $\alpha$.
-    \item Loteria III: resultados S con probabilidad de $1-\beta$ y P con probabilidad $\beta$. 
-    \item Loteria IV: resultados S con probabilidad de $1-\beta$ y Q con probabilidad $\beta$. 
-\end{itemize}
-Establece que: 
-\begin{align*}
-    L_I>L_{II} \iff P>Q \\ 
-    L_{III}>L_{IV} \iff Q>P
-\end{align*}
+    \section{Decisiones}
+    A lo largo del curso las decisiones se veran representadas en arboles de decision, tal cual se muestra acontinuacion: 
+    \begin{figure} [H]
+        \centering
+        \includesvg[width=0.5\linewidth]{figuras/juegos_1.drawio.svg}
+        \caption{Arbol de Decision}
+        \label{fig:placeholder}
+    \end{figure}
+    \subsection{Paradigma de la eleccion racional}
+    Elegir la mejor accion del conjuntos $A$ dadas su preferencias y restricciones. 
+    Tal que parten de $A\rightarrow X \Rightarrow$ Preferencias al respecto. \\
+    Para esto se establece una funcion de pago que viene a represetar la asociacion de preferencias de la eleccion. \\
+    La funcion de pagos esta dada por: $$v(a)=u(x(a))$$
 
-\begin{tadelis}
-Según el libro, la ecuación de Euler caracteriza
-la senda óptima de consumo.
-\end{tadelis}
-\begin{comentarioprofe}
-El profesor enfatizó que esta condición solamente se cumple
-bajo determinadas condiciones de interioridad.
-\end{comentarioprofe}
-\begin{importante}
-La tasa de interés afecta el costo de oportunidad
-del consumo presente.
-\end{importante}
+    \section{Incertidumbre}
+    Los resultados estocasticos hacen rererencia a la incertidumbre asociada a cada resultado. \\
+    \textbf{Supuestos}
+    \begin{enumerate}
+        \item Cada resultado se puede determinar objetivamente. 
+        \item Los tomadores de decisiones se interesan en el resultado, no en el proceso para llegar a el. 
+        \item $X\in R$, siendo $R$ el conjunto finito de resultados. 
+        \item cada posible resultado esta presente en la probablidad. 
+    \end{enumerate}
+    A continuacion iremos trabajando un ejemplo con diversos conceptos relacionados. 
+    \begin{ejemplo}
+        \textbf{Ejemplo Proyecto de Investigacion y Desarrollo Parte 1}
+        Una empresa $E$ debe elegir si realizar ($g$) o no realizar ($s$) un proyecto de investigacion para mejorar su negocio. Ademas saben que en sus resultados $X$ obtienen un $10$ si resulta exitoso, y $0$ si no. \\
+        Por lo tanto su conjunto de acciones ($A$) y resultados ($X$) es:
+        $$A=\{g,s\} \quad X=\{0,10\}$$
+        Ademas se sabe que si deciden realizarlo $g$ tienen un 10\% de probabilidad de obtener $10$, y si deciden no realizarlo $s$ tienen un 50\% de obtener 10. \\
+        Un arbol de decisiones se veria de la siguiente manera: \\
+        \begin{figure} [H]
+            \centering
+            \includesvg[width=0.5\linewidth]{figuras/juegos_2.drawio.svg}
+            \label{fig:placeholder}
+        \end{figure}
+    \end{ejemplo}
+    \subsection{lotería Simple}
+    Una lotería simple esta dada por un conjunto de resultados $X=\{x_1,x_2,...,x_n\}$, se define una probabilidad  $P=\{p(x_1),p(x_2),...,p(x_n)\}$ tal que $$\sum_{k=1}^np(x_k)=1$$
+    La importancia de las loterías es marcar la presencia de la naturaleza en la toma de decisiones, estas al trabajar con probabilidades se basan en ideas basicas de las distribuciones de probabilidad. 
+    \subsubsection{Teorema de Bayes}
+    Sea $\{A_1,A_2,...,A_n\}$ un conjunto de eventos mutuamente excluyentes y exhaustivos, donde $P(A_i)>0$. Y sea B un suceso del que se conocen sus probabilidades condicionales $P(B|A_i)$. \\
+    Entonces el teorema de Bayes muestra que: 
+    $$P(A_i|B)=\frac{P(B|A_i)P(A)}{P(B)}$$
+    \subsection{lotería Compuesta}
+    Cuando se tiene una lotería sobre una lotería, se clasifica como lotería compuesta. 
+    \begin{ejemplo}
+        \textbf{Ejemplo Proyecto de Investigación y Desarrollo. Parte 2}\\
+        En este caso estamos cargando de probabilidad a la segunda lotería, podemos ver que la parte donde la naturaleza ($N$), ahora parte de nuevas probabilidades. 
+        \begin{figure} [H]
+            \centering
+            \includesvg[width=0.4\linewidth]{figuras/juegos_3.drawio.svg}
+            \label{fig:placeholder}
+        \end{figure}
+    \end{ejemplo}
+    \subsubsection{Lotería Simple Continua}
+    Sobre el intervalo $X=\{ {{\underline{x}},\bar{x}}\}$ que viene de una Funcion de Distribucion Acumulada (FDA) $F:X\rightarrow[0,1]$ donde $F(\hat{x})=P(x \leq \hat{x})$ es la probabilidad de que un resultado sea menor o igual a $\hat{x}$. 
+    \begin{ejemplo}
+        \textbf{Ejemplo Proyecto de Investigacion y Desarrollo. Parte 3}\\
+        Ahora asumamos que existe un costo ($c$) por realizar ($g$) el proyecto de investigacion, de forma que nuestro arbol de decisiones se veria asi. 
+        \begin{figure} [H]
+            \centering
+            \includesvg[width=0.4\linewidth]{figuras/juegos_4.drawio.svg}
+            \label{fig:placeholder}
+        \end{figure}
+        En este caso podemos ver la utilidad esperada para determinar cual es el $C$ que pueda tomar la empresa. 
+        \begin{align*}
+            \pi_s&=0.5\cdot 10+0.5\cdot 0=5\\ \\
+            \pi_g&=0.625[0.9\cdot(10-c)+0.1(0-c)]+0.375[0.5(10-c)+0.1(0-c)]\\
+            \pi_g&=7.5-c\\
+            & \text{Para ser congruentes se debe cumplir que:} \\ \pi_g&>\pi_s \\ 7.5-c&>5 \\ 2.5&>c 
+        \end{align*}
+        Por lo tanto descubrimos que el costo minimo para decidir hacer o no la investigacion es $2.5$. 
+    \end{ejemplo}
+
+    \section{Axioma de Independencia}
+    Se consideran cuatro loterias, tal que: 
+    \begin{itemize}
+        \item Loteria I: resultados R con probabilidad de $1-\alpha$ y P con probabilidad Q. 
+        \item Loteria II: resultados R con probabilidad de $1-\alpha$ y P con probabilidad $\alpha$.
+        \item Loteria III: resultados S con probabilidad de $1-\beta$ y P con probabilidad $\beta$. 
+        \item Loteria IV: resultados S con probabilidad de $1-\beta$ y Q con probabilidad $\beta$. 
+    \end{itemize}
+    Establece que: 
+    \begin{align*}
+        L_I>L_{II} \iff P>Q \\ 
+        L_{III}>L_{IV} \iff Q>P
+    \end{align*}
+
+    \begin{tadelis}
+    Según el libro, la ecuación de Euler caracteriza
+    la senda óptima de consumo.
+    \end{tadelis}
+    \begin{comentarioprofe}
+    El profesor enfatizó que esta condición solamente se cumple
+    bajo determinadas condiciones de interioridad.
+    \end{comentarioprofe}
+    \begin{importante}
+    La tasa de interés afecta el costo de oportunidad
+    del consumo presente.
+    \end{importante}
 
 \end{document}

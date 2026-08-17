@@ -163,7 +163,7 @@ def write_course_page(course_slug: str, course_name: str, docs: list[Document]):
         lines.append("")
         pdf_name = doc.slug + ".pdf"
         lines.append(
-            f"[Abrir {name}](../../pdf/{course_slug}/{pdf_name})"
+            f"[Abrir {doc.title}](../../pdf/{course_slug}/{pdf_name})"
         )
         lines.append("")
         lines.append("---")
@@ -182,6 +182,7 @@ def compile_pdfs(library):
     print("=" * 60)
 
     pdf_root = DOCS_DIR / "pdf"
+
     if pdf_root.exists():
         shutil.rmtree(pdf_root)
 
@@ -190,7 +191,6 @@ def compile_pdfs(library):
     for _, course_docs in library.items():
 
         course_slug = course_docs[0].course_slug
-
         course_pdf_dir = pdf_root / course_slug
         course_pdf_dir.mkdir(parents=True, exist_ok=True)
 
@@ -198,33 +198,67 @@ def compile_pdfs(library):
 
             print(f"📄 {doc.title}")
 
+            # ------------------------------------------
+            # Limpiar compilaciones anteriores
+            # ------------------------------------------
+
+            subprocess.run(
+                ["latexmk", "-C"],
+                cwd=doc.tex_path.parent,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
+
+            # ------------------------------------------
+            # Compilar desde cero
+            # ------------------------------------------
+
             result = subprocess.run(
                 [
                     "latexmk",
                     "-xelatex",
+                    "-shell-escape",
                     "-interaction=nonstopmode",
+                    "-halt-on-error",
                     doc.tex_path.name,
                 ],
                 cwd=doc.tex_path.parent,
             )
 
-            if result.returncode != 0:
+            # ------------------------------------------
+            # Verificar que realmente exista el PDF
+            # ------------------------------------------
+
+            pdf_source = doc.tex_path.with_suffix(".pdf")
+
+            if result.returncode != 0 or not pdf_source.exists():
+
                 print(f"❌ Error compilando {doc.title}")
                 continue
 
-            pdf_source = doc.tex_path.with_suffix(".pdf")
-            pdf_dest = course_pdf_dir / f"{doc.slug}.pdf"
-            shutil.copy2(pdf_source, pdf_dest)
+            # ------------------------------------------
+            # Copiar PDF a docs/pdf
+            # ------------------------------------------
 
-            subprocess.run(
-                [
-                    "latexmk",
-                    "-c",
-                ],
-                cwd=doc.tex_path.parent,
+            pdf_dest = course_pdf_dir / f"{doc.slug}.pdf"
+
+            shutil.copy2(
+                pdf_source,
+                pdf_dest
             )
 
             print(f"✓ {doc.title}")
+
+            # ------------------------------------------
+            # Limpiar archivos auxiliares
+            # ------------------------------------------
+
+            subprocess.run(
+                ["latexmk", "-c"],
+                cwd=doc.tex_path.parent,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
 
 def update_mkdocs(library):
 

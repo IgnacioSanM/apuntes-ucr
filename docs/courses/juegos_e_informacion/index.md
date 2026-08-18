@@ -10,10 +10,10 @@
 
 ---
 
-###  Tema 2.
+###  Tema 2
 
 **Autor:** Ignacio Sanabria
 
-[ Tema 2.](../../pdf/juegos_e_informacion/tema_2..pdf)
+[ Tema 2](../../pdf/juegos_e_informacion/tema_2.pdf)
 
 ---

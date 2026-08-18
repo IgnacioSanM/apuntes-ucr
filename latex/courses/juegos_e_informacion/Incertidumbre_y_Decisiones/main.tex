@@ -36,10 +36,10 @@
     boxrule=0.8pt,
     arc=2mm
 }
-\newtcolorbox{ejemplo}{
+\newtcolorbox{ejemplo}[1]{
     colback=gray!8,
     colframe=gray!70!black,
-    title=Ejemplo,
+    title=#1,
     fonttitle=\bfseries,
     boxrule=0.8pt,
     arc=2mm
@@ -84,7 +84,7 @@ Estas vienen dadas por:
 
 \section{Axiomas de Preferencias}
 \begin{enumerate}
-    \item \textbf{Axioma de Completitud:} Los agentes económicos siempre son capaces de ordenar sobre dos resultados. \texttit{No pueden quedar indiferentes ante dos resultados.}
+    \item \textbf{Axioma de Completitud:} Los agentes económicos siempre son capaces de ordenar sobre dos resultados. \textit{No pueden quedar indiferentes ante dos resultados.}
     \item \textbf{Axioma de Transitividad:} Son capaces de ordenar todos los resultados. \textit{Garantiza que no existen contradicción de elecciones de los jugadores.} 
 \end{enumerate}
 \subsection{Paradoja de Condorcet 1785}
@@ -292,7 +292,7 @@ bajo determinadas condiciones de interioridad.
 \end{comentarioprofe}
 \begin{importante}
 La tasa de interés afecta el costo de oportunidad
-del consumo presente.
+del consumo presente..
 \end{importante}
 
 \end{document}

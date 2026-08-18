@@ -1,10 +1,10 @@
 # Fdb version 4
 ["xdvipdfmx"] 0 "main.xdv" "main.pdf" "main" 0 -1
-  "main.xdv" 1786989616.1097 10556 9f77dbd64c1033faf55a6a3c535b7b9c "xelatex"
+  "main.xdv" 1787077586.32187 10556 ab9437e25ca1255035abd29464c7fcc4 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1786989615.42543 "main.tex" "main.xdv" "main" 1786989616.18193 2
+["xelatex"] 1787077585.58497 "main.tex" "main.xdv" "main" 1787077586.37808 2
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -183,7 +183,7 @@
   "/usr/local/texlive/2026/texmf-dist/web2c/texmf.cnf" 1770478701 43630 e9fa012910491fe5ae08a72c3c2997a7 ""
   "/usr/local/texlive/2026/texmf-var/web2c/xetex/xelatex.fmt" 1774209578 5948559 ca66a59f4cdd4ce9709bed46018cb9cb ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
-  "main.aux" 1786989616.10965 537 fa00da11e1c846f9796d908c622ab7cc "xelatex"
+  "main.aux" 1787077586.32169 537 fa00da11e1c846f9796d908c622ab7cc "xelatex"
   "main.tex" 1786036226.68163 11536 d862ca1f19677571b820a2d4cf0fd920 ""
   (generated)
   "main.aux"

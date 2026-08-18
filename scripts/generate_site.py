@@ -163,7 +163,7 @@ def write_course_page(course_slug: str, course_name: str, docs: list[Document]):
         lines.append("")
         pdf_name = doc.slug + ".pdf"
         lines.append(
-            f"[Abrir {doc.title}](../../pdf/{course_slug}/{pdf_name})"
+            f"[ {doc.title}](../../pdf/{course_slug}/{pdf_name})"
         )
         lines.append("")
         lines.append("---")

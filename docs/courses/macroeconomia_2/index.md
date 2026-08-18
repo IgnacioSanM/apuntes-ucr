@@ -6,6 +6,6 @@
 
 **Autor:** Ignacio Sanabria
 
-[Abrir Clase 1](../../pdf/macroeconomia_2/clase_1.pdf)
+[ Clase 1](../../pdf/macroeconomia_2/clase_1.pdf)
 
 ---

@@ -115,7 +115,6 @@ def build_library():
     documents = []
     for tex_file in LATEX_DIR.rglob("main.tex"):
          
-        print(f"🔎 Encontrado: {tex_file}")
 
         document = read_document(tex_file)
 

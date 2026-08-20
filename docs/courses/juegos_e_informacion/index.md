@@ -9,11 +9,3 @@
 [ Tema 1. Incertidumbre y Decisiones Racionales](../../pdf/juegos_e_informacion/tema_1._incertidumbre_y_decisiones_racionales.pdf)
 
 ---
-
-###  Tema 2
-
-**Autor:** Ignacio Sanabria
-
-[ Tema 2](../../pdf/juegos_e_informacion/tema_2.pdf)
-
----

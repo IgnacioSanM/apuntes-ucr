@@ -1,0 +1,17 @@
+Moverse entre terminales: 
+cd (path)
+
+Borrar docs auxiliares: latexmk -C
+
+Correr script: 
+python3 scripts/generate_site.py
+
+Actualizar pagina: 
+git status 
+git add . 
+git commit -m"Nombre de la actualizacion" 
+git push 
+
+Regresar a main directory: 
+cd ~/Documents/Universidad/Github/apuntes-ucr
+

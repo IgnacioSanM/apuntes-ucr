@@ -113,7 +113,7 @@ Sin embargo, esto rompe el \textbf{axioma de transitividad} dado que:
 A lo largo del curso las decisiones se verán representadas en arboles de decisión, tal cual se muestra continuación: 
 \begin{figure} [H]
     \centering
-    \includesvg[width=0.5\linewidth]{figuras/juegos_1.drawio.svg}
+    \includesvg[width=0.5\linewidth]{figuras/tema_1/juegos_1.drawio.svg}
     \caption{Árbol de Decisión}
     \label{fig:placeholder}
 \end{figure}
@@ -141,7 +141,7 @@ A continuación iremos trabajando un ejemplo con diversos conceptos relacionados
     Un árbol de decisiones se vería de la siguiente manera: \\
     \begin{figure} [H]
         \centering
-        \includesvg[width=0.5\linewidth]{figuras/juegos_2.drawio.svg}
+        \includesvg[width=0.5\linewidth]{figuras/tema_1/juegos_2.drawio.svg}
         \label{fig:placeholder}
     \end{figure}
 \end{ejemplo}
@@ -158,7 +158,7 @@ Cuando se tiene una lotería sobre una lotería, se clasifica como lotería comp
     En este caso estamos cargando de probabilidad a la segunda lotería, podemos ver que la parte donde la naturaleza ($N$), ahora parte de nuevas probabilidades. 
     \begin{figure} [H]
         \centering
-        \includesvg[width=0.4\linewidth]{figuras/juegos_3.drawio.svg}
+        \includesvg[width=0.4\linewidth]{figuras/tema_1/juegos_3.drawio.svg}
         \label{fig:placeholder}
     \end{figure}
 \end{ejemplo}
@@ -168,7 +168,7 @@ Sobre el intervalo $X=\{ {{\underline{x}},\bar{x}}\}$ que viene de una Función 
     Ahora asumamos que existe un costo ($c$) por realizar ($g$) el proyecto de investigacion, de forma que nuestro arbol de decisiones se veria asi. 
      \begin{figure} [H]
         \centering
-        \includesvg[width=0.4\linewidth]{figuras/juegos_4.drawio.svg}
+        \includesvg[width=0.4\linewidth]{figuras/tema_1/juegos_4.drawio.svg}
         \label{fig:placeholder}
     \end{figure}
     En este caso podemos ver la utilidad esperada para determinar cual es el $C$ que pueda tomar la empresa. 
@@ -258,7 +258,7 @@ Y sean las probabilidades dadas por: $P_1=(0.25,0.5,0,25)=P_2$\\
 El arbol de decicion se veria de la siguiente forma: 
     \begin{figure} [H]
         \centering
-        \includesvg[width=0.3\linewidth]{figuras/juegos_5.drawio.svg}
+        \includesvg[width=0.3\linewidth]{figuras/tema_1/juegos_5.drawio.svg}
         \label{fig:placeholder}
     \end{figure}
 Calculando el valor esperado de cada uno obtenemos: 
@@ -281,18 +281,26 @@ Por ende, la decision racional es decidir estudiar el posgrado.
     $$\sum_{t=1}^T \delta^{t-1}u(x_t)$$ 
 \end{itemize}
 
+\newpage
+\subsection{Valor de la información}
+Es relevante siempre que aporte un cambio a la utilidad esperada. 
+\begin{ejemplo}{Posgrado: conociendo el mercado}
+    Recuerde el ejemplo de estudiar o no un posgrado. Considere que esta vez usted sabe las probabilidades del mercado de estar fuerte, medio o débil. \\
+    Tal que: $p(fuerte)=0.25,\quad p(medio)=0.5, \quad p(debil)=0.25$
+    \begin{figure} [H]
+        \centering
+        \includesvg[width=0.5\linewidth]{figuras/tema_1/juegos_6.drawio.svg}
+        \label{fig:placeholder}
+    \end{figure}
+    Si calculamos la utilidad esperada con información $(c.i)$ y la utilidad esperada sin información $(s.i)$ tenemos: 
+    \begin{align*}
+        V(c.i)=&0.25\cdot22+0.5\cdot 8+0.25\cdot 4= 10.5 \\
+        V(s.i)=&9 \\
+        &\text{Fue calculada en la parte anterior. }    
+    \end{align*}
+    Por ende podemos concluir que en este ejemplo obtener información nos garantiza una mejor utilidad esperada que no teniéndola. 
+\end{ejemplo}
 
-\begin{tadelis}
-Según el libro, la ecuación de Euler caracteriza
-la senda óptima de consumo.
-\end{tadelis}
-\begin{comentarioprofe}
-El profesor enfatizó que esta condición solamente se cumple
-bajo determinadas condiciones de interioridad.
-\end{comentarioprofe}
-\begin{importante}
-La tasa de interés afecta el costo de oportunidad
-del consumo presente..
-\end{importante}
+
 
 \end{document}

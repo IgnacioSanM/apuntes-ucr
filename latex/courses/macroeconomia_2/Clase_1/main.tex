@@ -269,7 +269,7 @@ Podemos observar que al haber una mayor pendiente en $r_1$, este hogar represent
     $$C_t=(\frac{1}{1+\beta})[Y_t+\frac{Y_{t+1}}{1+r_t}]$$
     y que $Y_t=S_t+C_t$ \\
     Por lo tanto llegamos a que: 
-    $$S_t=(\frac{\beta}{1+\beta})(Y_t-\frac{Y_{t+1}}{1+r_t})$$
+    $$S_t=(\frac{1}{1+\beta})(\beta Y_t-\frac{Y_{t+1}}{1+r_t})$$
     Viendo esto sabemos que si $$S_t<0 \iff Y_t<\frac{Y_{t+1}}{1+r_t})$$
 \end{ejemplo}
 
@@ -342,10 +342,46 @@ En este caso $\sigma$ es la \textbf{elasticidad sustitucion intertemporal}, es d
 \end{itemize}
 \end{importante} 
 \begin{ejemplo}{Funcion CARRA}
+    Sea $$u(c)=\frac{c^{1-\frac{1}{\sigma}}}{1-\frac{1}{\sigma}},$$. Y su derivada sea $u'(c)=c^{-\frac{1}{\sigma}}$\\
+    Aplicando el lagrangiano con la RPI obtenemos:
+    \begin{align*}
+        [C_t]: C_t^{-\frac{1}{\sigma}}-\lambda=0\\
+        [C_{t+1}]: C_{t+1}^{-\frac{1}{\sigma}}\beta-\frac{\lambda}{1+r_t}=0\\
+        {(\frac{C_{t+1}}{C_{t}}})^{-\frac{1}{\sigma}}=\frac{\frac{\lambda}{\beta(1+r_t)}}{\lambda}\\
+        {(\frac{C_{t+1}}{C_t}})^{-{1}}=\frac{1}{(\beta(1+r_t))^\sigma}\\
+        \frac{C_{t+1}}{C_t}={(\beta(1+r_t))^\sigma}\\
+        C_{t+1}={(\beta(1+r_t))^\sigma} \cdot C_t
+    \end{align*}
+    Ahora procedemos a inyectar $C_t$ en la RPI
+    \begin{align*}
+        C_t+\frac{{(\beta(1+r_t))^\sigma} \cdot C_t}{(1+r_t)}=(Y_t+\frac{Y_{t+1}}{1+r_t})\\
+        C_t(1+\frac{{(\beta(1+r_t))^\sigma}}{(1+r_t)})=(Y_t+\frac{Y_{t+1}}{1+r_t})\\
+        C_t(\frac{(1+r_t)+(\beta(1+r_t))^\sigma}{(1+r_t)})=(Y_t+\frac{Y_{t+1}}{1+r_t})\\
+        C_t=[\frac{(1+r_t)}{(1+r_t)+(\beta(1+r_t))^\sigma}](Y_t+\frac{Y_{t+1}}{1+r_t})
+    \end{align*}
+    La forma de comprobar que esta igualdad es correcta es si $\sigma=1$ obtenemos el ejemplo Logaritmica donde $\frac{\partial C_t}{\partial Y_t}=(\frac{1}{1+\beta})$
+\end{ejemplo}
+\begin{ejemplo}{Funcion CARRA}
+    Podemos comprobar que: 
+    \begin{align*}
+        \text{Si $\sigma =1$ obtenemos:}\\
+        C_t=[\frac{(1+r_t)}{(1+r_t)+(\beta(1+r_t))^1}](Y_t+\frac{Y_{t+1}}{1+r_t})\\
+        C_t=\frac{(1+r_t)}{(1+r_t)(1+(\beta))}(Y_t+\frac{Y_{t+1}}{1+r_t})\\
+        \therefore C_t=(\frac{1}{1+\beta})(Y_t+\frac{Y_{t+1}}{1+r_t})\\\\
+        \frac{\partial C_t}{\partial Y_t}=(\frac{1}{1+\beta})
+    \end{align*}
+    De aqui podemos ver que el resultado de $\frac{\partial C_t}{\partial r_t}$ depende de $\sigma$. \\
+    Tal que: 
+    \begin{equation*}
+        \begin{array}{cc}
+         \text{Si}\; \sigma \le 1 & \Rightarrow{}   \frac{\partial C_t}{\partial r_t} <0\\
+         \text{Si}\; \sigma>1 & \Rightarrow{}   \frac{\partial C_t}{\partial r_t} >0
+    \end{array}
+    \end{equation*}
     
 \end{ejemplo}
 
-
+\newpage
 \section{Agregación y Equilibrio General}
 Suponga dos tipos de hogares con preferencias distintas, cada hogar tiene medida $N1$ y $N2$. 
 Entonces: 
@@ -372,13 +408,22 @@ Para comprender mejor veamos el siguiente ejemplo:
     \end{align*}
     El ahorro de estos hogares se veria: 
     \begin{align*}
-        S_t^1=
+        S_t^1=&(\frac{\beta}{1+\beta})(Y_t^1-\frac{Y_{t+1}^1}{1+r_t})=\frac{\beta}{1+\beta}\\
+        S_t^2=&(\frac{\beta}{1+\beta})(Y_t^2-\frac{Y_{t+1}^2}{1+r_t})=(\frac{\beta}{1+\beta})(\frac{1}{1+r_t})
     \end{align*}
 \end{ejemplo}
-
-Mercado de FP, $r_t^*$ vacia o aclara el mercado de fondos prestables si no hay exceso de oferta ni demanda. Generando que $S_t(r_t^*)=0$
-
-
-$\overset{a}{a}$
+\begin{ejemplo}{2 Hogares Representativos}
+    Suponga entonces que N1=1, N2=1\\
+    $$S_t(r_t)=\frac{\beta}{1+\beta}-(\frac{\beta}{1+\beta})(\frac{1}{1+r_t})$$
+    Por ende: \\
+    \begin{equation*}
+        \begin{array}{cc}
+            \text{Si } S_t(r_t)>0 & \Rightarrow{} \text{Exeso de oferta de fondos prestables}  \\
+            \text{Si } S_t(r_t)<0  & \Rightarrow{} \text{Exeso de demanda de fondos prestables} 
+        \end{array}
+    \end{equation*}
+    Entonces: $r_t^*$ vacia o aclara el mercado de fondos prestables si no hay exceso de oferta ni demanda. \\
+    Generando que $$S_t(r_t^*)=0$$
+\end{ejemplo}
 
 \end{document}

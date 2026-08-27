@@ -361,6 +361,7 @@ En este caso $\sigma$ es la \textbf{elasticidad sustitucion intertemporal}, es d
     \end{align*}
     La forma de comprobar que esta igualdad es correcta es si $\sigma=1$ obtenemos el ejemplo Logaritmica donde $\frac{\partial C_t}{\partial Y_t}=(\frac{1}{1+\beta})$
 \end{ejemplo}
+
 \begin{ejemplo}{Funcion CARRA}
     Podemos comprobar que: 
     \begin{align*}
@@ -380,7 +381,6 @@ En este caso $\sigma$ es la \textbf{elasticidad sustitucion intertemporal}, es d
     \end{equation*}
     
 \end{ejemplo}
-
 \newpage
 \section{Agregación y Equilibrio General}
 Suponga dos tipos de hogares con preferencias distintas, cada hogar tiene medida $N1$ y $N2$. 
@@ -416,14 +416,166 @@ Para comprender mejor veamos el siguiente ejemplo:
     Suponga entonces que N1=1, N2=1\\
     $$S_t(r_t)=\frac{\beta}{1+\beta}-(\frac{\beta}{1+\beta})(\frac{1}{1+r_t})$$
     Por ende: \\
-    \begin{equation*}
-        \begin{array}{cc}
+\begin{equation}
+    \begin{array}{cc}
             \text{Si } S_t(r_t)>0 & \Rightarrow{} \text{Exeso de oferta de fondos prestables}  \\
             \text{Si } S_t(r_t)<0  & \Rightarrow{} \text{Exeso de demanda de fondos prestables} 
-        \end{array}
-    \end{equation*}
+    \end{array}
+\end{equation}
     Entonces: $r_t^*$ vacia o aclara el mercado de fondos prestables si no hay exceso de oferta ni demanda. \\
     Generando que $$S_t(r_t^*)=0$$
 \end{ejemplo}
+\newpage
+\subsection{Equilibrio General}
+Consiste en que $\{C_t,C_{t+1},S_t,S_{t+1}\}$ se equilibran dadas las variaciones exogenas de $\{Y_t,Y_{t+1}\}$, se cumple simultaneamente que: 
+\begin{enumerate}
+    \item Los hogares optimizan, es decir se cumplen las condiciones de optimalidad como: \textbf{ecuacion de euler, restriccion de consumo presente, y restriccion de consumo futuro.}
+    \begin{itemize}
+        \item $u'(C_t)=\beta (1+r_t)\; u'(C_{t+1})$
+        \item $C_t+S_t=Y_t$ siempre que $S_{t-1}=0$
+        \item $C_{t+1}=Y_{t+1}+(1+r_t)S_t$
+    \end{itemize}
+    \item El mercado de fondos prestables esta en equilibrio
+    $$S_t=0 \iff Y_t-C_t=0 \iff Y_t=C_t$$
+\end{enumerate}
+\begin{ejemplo}{Logaritmica}
+    Sea $u(c)=log(c)$\\
+    En este caso $\{C_t,C_{t+1},r_t\}$ son de equilibrio general si: 
+    \begin{itemize}
+        \item $u'(C_t)=\beta (1+r_t)\; u'(C_{t+1})$
+        \item $RPI$
+        \item $C_t=Y_t$
+    \end{itemize}
+    Ahora, sabemos que $$C_t=\frac{1}{1+\beta}(Y_t+\frac{Y_{t+1}}{1+r_t})$$
+    Determine $\{C_t,C_{t+1},S_t,S_{t+1}\}$. \\
+    Sabemos que $S_t=0$\\
+    Si tenemos: $$S_t=(\frac{1}{1+\beta})(\beta Y_t-\frac{Y_{t+1}}{1+r_t})$$ 
+    Sabemos que $$1+r_t=\frac{Y_{t+1}}{\beta Y_t}$$
+    Si inyectamos este $1+r_t$ en nuestra funcion $C_t=\frac{1}{1+\beta}(Y_t+\frac{Y_{t+1}}{1+r_t})$ llegamos al resultado: $$C_t=Y_t$$
+\end{ejemplo}
+\begin{comentarioprofe}{Observe}
+    Considere: $$1+r_t=\frac{Y_{t+1}}{\beta Y_t}$$
+    \begin{itemize}
+        \item Si $\uparrow Y_{t+1}$ en eq. general $\uparrow r_t \Rightarrow{} C_t$ no cambia. 
+        \textit{El hogar quiere ahorrar menos/endeudarse mas a $r_t$}
+        \item Sea $r_0<r_1$: 
+        \begin{itemize}
+            \item En $r_0$ hay exceso de demanda de fondos prestables. 
+            Esto genera un alza en $r_t$ hasta eliminar el exceso. 
+        \end{itemize}
+        \item Si $\uparrow\beta \Rightarrow{} \downarrow r_t$
+        \begin{itemize}
+            \item Mas pacientes, el hogar quiere ahorrar mas. 
+            \item exceso de oferta de fondos prestables 
+            \item $\downarrow r_t$
+        \end{itemize}
+    \end{itemize}
+\end{comentarioprofe}
+\begin{ejemplo}{Logaritmica}
+    Sea $\beta (1+r_t)=1\; \Rightarrow{}C_t=C_{t+1}$\\
+    Tal que: $$C_t=(\frac{1+r_t}{2+r_t})(Y_t+\frac{Y_{t+1}}{1+r_t})$$
+    Sabemos por la igualdad que entonces: $\beta (1+r_t)=1\; \Rightarrow{} 1+r_t=\frac{1}{\beta}$\\
+    Si $u(c)=log(c)$ sabemos que: $$1+r_t=\frac{Y_{t+1}}{\beta Y_t}$$
+    Se veria de forma: 
+    \begin{figure} [H]
+        \centering
+        \includesvg[width=0.5\linewidth]{figuras/clase_1/macro_5.drawio.svg}
+        \label{fig:placeholder}
+    \end{figure}
+\end{ejemplo}
+\subsection{Restricciones de Endeudamiento}
+Recuerde: 
+\begin{align*}
+    \underbrace{max}_{\{ C_t, C_{t+1},S_t,S_{t+1}\}} u(C_t)+\beta\cdot u(C_{t+1}) \\ \text{s.a} \\ C_t+S_t & =Y_t \\  C_{t+1}+S_{t+1} & =Y_{t+1}+(1+r_t)S_t 
+\end{align*}
+Sea $d_t=-S_t$, siendo este el endeudamiento. \\
+Por ende tendriamos: 
+\begin{align*}
+    \underbrace{max}_{\{ C_t, C_{t+1},S_t,S_{t+1}\}} u(C_t)+\beta\cdot u(C_{t+1}) \\ \text{s.a} \\ C_t & =Y_t+d_t \\  C_{t+1}+(1+r_t)d_t & =Y_{t+1} \\
+    d_t&<k \cdot Y_t\; ;\; 0 \leq k 
+\end{align*}
+Visto graficamente tendriamos: 
+\begin{figure} [H]
+        \centering
+        \includesvg[width=0.5\linewidth]{figuras/clase_1/macro_6.drawio.svg}
+        \label{fig:placeholder}
+    \end{figure}
+\begin{ejemplo}{Logaritmica}
+    Con $B(1+r_t)=1$ tal que $C_t=C_{t+1}$, sin restricciones de endeudamiento. \\
+    Sabemos que $C_t=(\frac{1}{1+\beta})(Y_t+\frac{Y_{t+1}}{1+r_t})$, por ende: \\
+    $$d_t=(\frac{1}{1+\beta})(\beta Y_t+\frac{Y_{t+1}}{1+r_t})$$
+    Necesitamos que $d_t\leq k\cdot Y_t$\\
+    Si $d_t>k\cdot Y_t \Rightarrow{}$ restricción de endeudamiento es vinculante.
+    \begin{align*}
+        d_t^R=&k\cdot Y_t \\ C_t^R -Y_t=&k\cdot Y_t\\ C_t^R=&(1+k)Y_t\; \textit{En este caso NO se cumple la ecuacion de Euler.}\\
+    \end{align*}
+    Note que si $K=0$, no se pueden endeudar del todo.\\
+    Y si la restriccion es vinculante $C_t^R=Y_t$
+\end{ejemplo}
+\begin{comentarioprofe}{Movimiento del K}
+Si tenemos $C_t^R=(1+k)Y_t$ sabemos que:
+\begin{itemize}
+    \item Si el hogar es \textbf{Hand-to-mouth} las fricciones finacieras impiden acceder plenamente al mercad de fondos prestables. 
+    \item Si no hubuesen fricciones el consumo seria $C_t=(\frac{1}{1+\beta})(Y_t+\frac{Y_{t+1}}{1+r_t})$, en este caso la PMC es mas alta que en hogares \textbf{H2M}
+\end{itemize}
+\end{comentarioprofe}
+\subsection{Consumo Intertemporal}
+Recordemos:
+\begin{align*}
+    \underset{\{C_{t+j},Y_j\}}{max}\; \sum_{j=0}^T \beta^ju(C_{t+j})\\
+    s.a \\
+    \sum^T_{j=0}\frac{C_{t+j}}{(1+r)^j}=\sum^T_{j=0}\frac{Y_{t+j}}{(1+r)^j}
+\end{align*}
+Y recordemos que $\beta(1+r_t)=1$ al igual que $\bar{C}=C_{t+j}\; \forall\; j=1,...,n$\\
+Ahora suponga que $\beta=1$ y $r=0$, y por ende: 
+\begin{align*}
+\bar{C}\sum_{j=0}^T\beta^j=W\\
+    \bar{C}(1+T)=W\\
+    \bar{C}=(\frac{1}{1+T})W
+\end{align*}
+Es decir, un la PMC depende de en cuantos periodos debe diluir su consumo el hogar demostrativo. \\
+Graficamente y manteniendo que $C_{t+j}=\bar{C}$\\
+\begin{figure} [H]
+        \centering
+        \includesvg[width=0.5\linewidth]{figuras/clase_1/macro_7.drawio.svg}
+        \label{fig:placeholder}
+\end{figure}
+
+Suponga para $Y_t>0$ dado tenemos: 
+\begin{align*}
+    Y_{t+1}=&(1+g)Y_t\\ Y_{t+2}=&(1+g)Y_{t+1}=(1+g)^2Y_t\\
+    \vdots \\Y_{t+3}=&(1+g)^3Y_t\\\vdots \\ Y_{t+R}=&(1+g)^j\cdot Y_t     
+\end{align*}
+De forma que: 
+\begin{figure} [H]
+        \centering
+        \includesvg[width=0.5\linewidth]{figuras/clase_1/macro_8.drawio.svg}
+        \label{fig:placeholder}
+\end{figure}
+El ingreso es creciente en el tiempo, tiene un espacio cuando alcanza $R$ que es la tasa de remplazo; pero en este caso dijimos que mantiene el mismo consumo durante todo el periodo de tiempo. Esto es debido a que puede ser ahorrante y/o deudor. 
+\newpage
+\subsection{Cambios en Variables Exogenas}
+Anteriormente demostramos que:
+$$\bar{C}=(\frac{1-\beta}{1-\beta^{T+1}})(\sum_{j=0}^T\beta^jY_{t+j})$$
+
+\begin{figure} [H]
+        \centering
+        \includesvg[width=0.5\linewidth]{figuras/clase_1/macro_9.drawio.svg}
+        \label{fig:placeholder}
+\end{figure}
+\begin{align*}
+    \bar{C}=(\frac{1-\beta}{1-\beta^{T+1}})(\sum_{j=0}^R\beta^jY_{t+j}+\sum_{j=R+1}^T\beta^jY_{t+j})\\
+    =(\frac{1-\beta}{1-\beta^{T+1}})(\sum_{j=0}^R\beta^j\mathbf{(1+g)^j\cdot Y_t}+\sum_{j=R+1}^T\beta^j\mathbf{Y_R})\\
+    =(\frac{1-\beta}{1-\beta^{T+1}})(Y_t \cdot\sum_{j=0}^R\beta^j\mathbf{(1+g)^j\cdot }+Y_R\sum_{j=R+1}^T\beta^j)\\
+    \vdots\\
+    \bar{C}=(\frac{1-\beta}{1-\beta^{T+1}})(Y_t \cdot \frac{1-(\beta(1+g))^{R+1}}{1-\beta(1+g)} +Y_R \frac{1-\beta^{T-R}}{1-\beta}\beta^{R+1})
+\end{align*}
+Sabiendo que $\bar{C}=C_t=C_{t+j}$ sabemos que: 
+\begin{itemize}
+    \item $\bar{C}$ es creciente en $Y_R$
+    \item $\bar{C}$ es creciente en $Y_t$
+    \item $\bar{C}$ es creciente en $g$
+    \item $\bar{C}$ es creciente en $R$, con un $Y_R$
+\end{itemize}
 
 \end{document}

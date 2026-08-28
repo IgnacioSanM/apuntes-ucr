@@ -2,18 +2,18 @@
 
 ## Documentos
 
-###  Clase 1
+###  Tema 1: Consumo
 
 **Autor:** Ignacio Sanabria
 
-[ Clase 1](../../pdf/macroeconomia_2/clase_1.pdf)
+[ Tema 1: Consumo](../../pdf/macroeconomia_2/tema_1:_consumo.pdf)
 
 ---
 
-###  Clase 2
+###  Tema 2: Producción
 
 **Autor:** Ignacio Sanabria
 
-[ Clase 2](../../pdf/macroeconomia_2/clase_2.pdf)
+[ Tema 2: Producción](../../pdf/macroeconomia_2/tema_2:_produccion.pdf)
 
 ---

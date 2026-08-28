@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc} % Codificación de caracteres
+\usepackage[spanish]{babel} % Idioma del documento
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{pgfplots}
+\usepackage{tabularx}
+\usepackage[margin=1in]{geometry}
+\usepackage{svg}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox{comentarioprofe}[1]{
+    colback=blue!5,
+    colframe=blue!50!black,
+    title=#1,
+    fonttitle=\bfseries,
+    boxrule=0.8pt,
+    arc=2mm
+}
+\newtcolorbox{ejemplo}[1]{
+    colback=gray!8,
+    colframe=gray!70!black,
+    title=#1,
+    fonttitle=\bfseries,
+    boxrule=0.8pt,
+    arc=2mm
+}
+\newtcolorbox{importante}[1]{
+    colback=orange!8,
+    colframe=orange!70!black,
+    title=#1,
+    fonttitle=\bfseries,
+    boxrule=0.8pt,
+    arc=2mm
+}
+
+\geometry{margin=1in}
+\onehalfspacing
+\pagestyle{fancy}
+\rhead{Macroeconomía II}
+\lhead{Clase 2}
+\title{Clase 2}
+\author{Ignacio Sanabria}
+\date{Agosto 2026}
+
+\begin{document}
+\maketitle
+
+\section{Productividad}
+En la parte de producción vamos a endogenizar $Y_t$\\
+Suponga un modelo de dos periodos: 
+$$Y_{t+j}=A_{t+j}F(K_{t+j},N_{t+j})\; \forall j=0,1$$
+Donde: 
+\begin{itemize}
+    \item $K_{t+j}$= Stock físico
+    \item $N_{t+j}$= Horas de trabajo 
+    \item $F(.,.)$= Función de producción 
+    \item $A_{t+j}$= \textbf{productividad total de factores}
+\end{itemize}
+
+\subsection{Capital Físico}
+Sea $\delta>0$ una tasa de depreciación en un modelo de \textbf{2} periodos. \\
+En el periodo $t$ hay una perdida de capital vista como: \\
+$$K_t \xrightarrow{produccion} (1-\delta)K_t $$
+Igual en el periodo futuro: \\
+$$K_{t+1} \xrightarrow{produccion} (1-\delta)K_{t+1} $$
+Vamos a asumir siempre que $K_t>0$, por el tiempo que lleva crear capital. \\
+Si en el primer periodo tengo $K_t$, en el segundo periodo tendría: 
+$$K_{t+1}=(1-\delta)K_t+I_t$$
+Donde $I_t$ es el pedido de nuevo capital a futuro. También llamada \textbf{Ley de Movimiento del Capital}\\
+\subsubsection{Ley de Movimiento del Capital}
+\begin{align*}
+    I_t=K_{t+1}-(1-\delta)K_t\\
+    K_{t+2}=(1-\delta)+I_{t+1}
+\end{align*}
+Sin embargo por ser solo \textbf{2} periodos, quiero $K_{t+2}=0$, es decir: \\
+$$ I_{t+1}=-(1-\delta)K_{t+1}$$
+Por ende sabemos que $I_t$ es la \textbf{inversión en capital}, puede ser positiva si quiero obtener capital o negativa si quiero desecharlo. \\
+De tal manera que: 
+\begin{figure} [H]
+        \centering 
+        \includesvg[width=0.5\linewidth]{figuras/clase_2/macro_t2_1.drawio.svg}
+        \label{fig:placeholder}
+\end{figure}
+\newpage
+\subsection{Empresa}
+Una empresa escoge $\{N_t,N_{t+1},I_t,I_{t+1},K_{t+1},K_{t+2}\}$ dado que: 
+\begin{figure} [H]
+        \centering 
+        \includesvg[width=0.5\linewidth]{figuras/clase_2/macro_t2_2.drawio.svg}
+        \label{fig:placeholder}
+\end{figure}
+Sea $D_t$= ganancias / dividendos que genera la empresa en $t$.
+\subsubsection{Mercado Laboral}
+\begin{itemize}
+    \item La empresa demanda $N_{t+j} (N_{t+j}^d)$
+    \item Hogares ofrecen $N_{t+j} (N_{t+j}^s)$
+    \item Tranzan con salario real $w_{t+j}$, en base a bienes de consumo. 
+\end{itemize}
+\subsubsection{Creación de Capital}
+La empresa tiene un $K_t$ dado, pero decide el $I_t$, sin embargo debe decidir si financiarlo con recursos propios o endeudamiento. \textbf{Es decir, existe un mercado de fondos prestables}\\
+\subsubsection{Endeudarse}
+Suponga que la empresa financia completamente su inversión en el mercado de fondos prestables. 
+\begin{itemize}
+    \item En $t$: Pide prestado $I_t$
+    \item En $t+1$: Paga $I_t+\text{Interés} \quad (r_t^I)$\\
+    Tal que $r_t^I=r_t+f_t$, donde $f_t$ es el margen de intermediación. 
+\end{itemize}
+\subsection{Utilidad}
+Tomando todos estos supuestos sabemos que: 
+$$D_t=Y_t-w_tN_t$$ son los dividendos en $t$\\
+En $t+1$: \\
+$$D_{t+1}=Y_{t+1}+(1+\delta)K_{t+1}-w_{t+1}N_{t+1}-(1-r_t^I)I_t$$
+Por ende el problema de la empresa es: 
+\begin{align*}
+    \underset{\{N_t,N_{t+1},I_t,I_{t+1},K_{t+1},K_{t+2} \}}{max} \;\underbrace{D_t+\frac{D_{t+1}}{1+r_t}}_{\text{Valor de la empresa}}
+\end{align*}
+De manera mas sencilla se maximiza la siguiente expresión: 
+$$\underbrace{\underbrace{A_tF(K_t,N_t)}_{Y_t}-w_tN_t}_{D_t}+\underbrace{(\frac{1}{1+r_t})[\underbrace{A_{t+1}F(K_{t+1},N_{t+1})}_{Y_{t+1}}+(1-\delta)K_{t+1}-w_{t+1}N_{t+1}-(1+r_t)\underbrace{(k_{t+1}-(1-\delta)K_t)}_{I_t}]}_{D_{t+1}}$$
+
+Ahora: 
+\begin{align*}
+    [N_t]:& A_tF_N(K_t,N_t)-w_t=0\\
+    [N_{t+1}]: & (\frac{1}{1+r_t})[A_{t+1}F_N(K_{t+1},N_{t+1})-w_{t+1}]=0 \\
+    [K_{t+1}]: & (\frac{1}{1+r_t})[A_{t+1}F_N(K_{t+1},N_{t+1})+(1-\delta)-(1+r_t)=0
+\end{align*}
+\textbf{Condiciones de optimalidad}
+\begin{enumerate}
+    \item $A_tF_N(K_t,N_t)=w_t$
+    \item $A_{t+1}F_N(K_{t+1},N_{t+1})= w_{t+1}$
+    \item $A_{t+1}F_K(K_{t+1},N_{t+1})+(1-\delta)= (1+r_t^I)$
+\end{enumerate}
+
+\begin{comentarioprofe}{Observe:}
+    Si $F(.,.)$ cumple las siguientes propiedades: 
+    \begin{enumerate}
+        \item $F(K,0)=0$ y $F(0,N)=0;\; \forall K,N$
+        \item $F_k(K,N)>0$ y $F_N(K,N)>0;\; \forall K,N$
+        \item $F_{KK}(K,N)<0$ y $F_{NN}(K,N)<0; \; \forall K,N$
+        \item $F_{NK}(K,N)>0$ y $F_{KN}(K,N)>0; \; \forall K,N$
+        \item $\forall\lambda : \lambda F(K,N)=F(\lambda K,\lambda N)$, es decir es homogénea de grado 1 y posee \textbf{rendimientos constantes a escala}
+    \end{enumerate}
+\end{comentarioprofe}
+
+
+
+
+\end{document}

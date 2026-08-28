@@ -41,6 +41,7 @@ def clean_output():
         shutil.rmtree(pdf_root)
 
     pdf_root.mkdir(parents=True, exist_ok=True)
+    
 def print_header(title):
 
     print()

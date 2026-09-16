@@ -1,6 +1,8 @@
 Moverse entre terminales: 
 cd (path)
 
+Generar PDF Local de Compilacion: 
+En el cd path de la carpte, pdflatex main.tex
 Borrar docs auxiliares: latexmk -C
 
 Correr script: 

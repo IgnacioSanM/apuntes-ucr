@@ -1,11 +1,11 @@
 # Microeconomia II
 
-## Documentos
+## Temas
 
-###  Teoria del Consumidor
+###  Teoría del Consumidor
 
-**Autor:** Ignacio Sanabria
+**Autor:** Ignacio Sanabria, Elena Minero
 
-[ Teoria del Consumidor](../../pdf/Microeconomia II/teoria_del_consumidor.pdf)
+[ Teoría del Consumidor](../../pdf/Microeconomia II/teoria_del_consumidor.pdf)
 
 ---

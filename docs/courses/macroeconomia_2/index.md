@@ -1,6 +1,6 @@
 # Macroeconomía Intermedia
 
-## Documentos
+## Temas
 
 ###  Tema 1: Consumo
 

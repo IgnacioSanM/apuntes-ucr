@@ -1,6 +1,6 @@
 # Teoría de Juegos e Información
 
-## Documentos
+## Temas
 
 ###  Tema 1. Incertidumbre y Decisiones Racionales
 

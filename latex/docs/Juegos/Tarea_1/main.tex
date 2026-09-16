@@ -1,0 +1,191 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc} % Codificación de caracteres
+\usepackage[spanish]{babel} % Idioma del documento
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{pgfplots}
+\usepackage{tabularx}
+\usepackage[margin=1in]{geometry}
+\usepackage{svg}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage[most]{tcolorbox}
+
+\renewcommand{\thesubsection}{\alph{subsection})}
+
+\newtcolorbox{tadelis}{
+    colback=blue!5,
+    colframe=blue!60!black,
+    title=\textit{Game Theory, Steven Tadelis},
+    fonttitle=\bfseries,
+    boxrule=0.8pt,
+    arc=2mm
+}
+\newtcolorbox{comentarioprofe}{
+    colback=green!5,
+    colframe=green!50!black,
+    title=Comentario,
+    fonttitle=\bfseries,
+    boxrule=0.8pt,
+    arc=2mm
+}
+\newtcolorbox{importante}{
+    colback=orange!8,
+    colframe=orange!70!black,
+    title=Importante,
+    fonttitle=\bfseries,
+    boxrule=0.8pt,
+    arc=2mm
+}
+\newtcolorbox{ejemplo}[1]{
+    colback=gray!8,
+    colframe=gray!70!black,
+    title=#1,
+    fonttitle=\bfseries,
+    boxrule=0.8pt,
+    arc=2mm
+}
+
+\geometry{margin=1in}
+\onehalfspacing
+\pagestyle{fancy}
+\rhead{Teoría de Juegos e Información}
+\lhead{Tarea I - II 2026}
+\title{Tarea I - II 2026}
+\author{
+    \\ \textbf{Integrantes:}\\\\
+    Randall Josue Esquivel Rojas \texttt{C4E974} \\\\
+    Elena Minero Fonseca \texttt{C4H249} \\\\
+    Ignacio Sanabria Mora \texttt{C27193}\\\\
+    Gabriel Gonzalez Sancho  \texttt{ C4F637} \\\\
+    Naomy Solano Vargas  \texttt{C4K124}\\\\\\\\\\
+}
+
+
+\begin{document}
+    \maketitle
+\newpage
+\section{El Dilema de Sartre}
+\subsection{Forma Extendida}
+Primero definimos las variables, sea: \\
+
+\begin{itemize}
+    \item $L$= El ejercito pierde la guerra 
+    \item $G$= El ejercito gana la guerra 
+    \item $D$= La madre fallece 
+    \item $V$= La madre vive
+    \item $J$=Joven
+    \item $N$=Naturaleza
+    \item $W$= Ir a la guerra
+    \item $M$= Quedarse con la madre 
+\end{itemize}
+Conociendo que tiene probabilidades dadas por: \\
+\begin{align*}
+    \begin{array}{cc}
+        P(L)=\frac{2}{7}  &  P(G)=\frac{5}{7}\\
+        P(D)=\frac{2}{9} & P(V)=\frac{7}{9}
+    \end{array}
+\end{align*}
+En la próxima página se muestra el árbol de decisión 1 de este ejercicio. 
+\newpage
+La forma extendida con los pagos adjuntos en rosado y las probabilidades en azul seria: 
+\begin{figure} [H]
+    \centering
+    \includesvg[width=0.7\linewidth]{tarea/arbol_1_tarea_1.drawio.svg}
+    \caption{Árbol de Decisión 1}
+    \label{fig:placeholder}
+\end{figure}
+\subsection{Pago Esperado}
+\subsubsection{Ir a la Guerra $W$}
+Iterando hacia atrás, el pago esperado seria: 
+\begin{align*}
+    v(W)=&(\frac{7}{9}\cdot400+\frac{2}{9}\cdot0)\cdot \frac{5}{7}+(\frac{7}{9}\cdot-100+\frac{2}{9}\cdot -400)\cdot \frac{2}{7}\\
+    =&(\frac{2800}{9})\cdot \frac{5}{7}+(\frac{-500}{3})\cdot \frac{2}{7}\\\\
+   v(W) =& \frac{11000}{63} \approx 174,60
+\end{align*}
+\subsubsection{Quedarse con la madre $M$}
+Iterando hacia atrás, el pago esperado seria: 
+\begin{align*}
+    v(M)=&(\frac{7}{9}\cdot300+\frac{2}{9}\cdot -320)\cdot \frac{5}{7}+(\frac{7}{9}\cdot250+\frac{2}{9}\cdot 50)\cdot \frac{2}{7}\\
+    =&(\frac{1460}{9})\cdot \frac{5}{7}+(\frac{1850}{9})\cdot \frac{2}{7}\\\\
+   v(M) =& \frac{11000}{63} \approx 174,60
+\end{align*}
+\subsection{¿Que decisión debería tomar?}
+Las dos decisiones tienen el mismo pago esperado, por lo tanto, el jugador es indiferente entre ir a la guerra y quedarse con su madre($W\sim M$). Siempre que este sea un jugador racional, escoger cualquiera de las dos le genera la misma utilidad esperada por lo cual no prefiere ninguna. 
+\subsection{¿Coincide o difiere con la critica?}
+En este caso la crítica de Sartre coincide con el resultado de los pagos esperados. En la crítica se planteaba como la moral de la época era incapaz de determinar una decisión correcta, con la \textit{teoría de incertidumbre y decisiones racionales} de \textit{Teoría de Juegos} podemos constatar que se comporta de la misma manera, ya que como vimos anteriormente, según sus pagos esperados no prefiere una decisión sobre otra. 
+\subsection{Nueva forma}
+Sea $C$=Conseguir información de la guerra, y sea $A$=Conseguir información del día de la muerte de la madre. 
+\begin{figure} [H]
+    \centering
+    \includesvg[width=0.6\linewidth]{tarea/arbol_2_tarea_1.drawio.svg}
+    \caption{Árbol de Decisión 2}
+    \label{fig:placeholder}
+\end{figure}
+\subsection{Pago Esperado}
+\subsubsection{Información de guerra ($C$)}
+Primero se calculan las esperanzas de $W$ y $M$ en los nodos de $C$ para ver que utilidad elige el jugador. \\
+\begin{itemize}
+    \item $v(W|G,C)=(400\cdot \frac{7}{9}+0\cdot \frac{2}{9})=\mathbf{\frac{2800}{9}}$
+    \item $v(M|G,C)=(300\cdot \frac{7}{9}+-320\cdot \frac{2}{9})=\frac{1460}{9}$
+    \item $v(W|L,C)=(-100\cdot \frac{7}{9}-400\cdot \frac{2}{9})=\frac{-500}{3}$
+    \item $v(M|L,C)=(250\cdot \frac{7}{9}+50\cdot \frac{2}{9})=\mathbf{\frac{1850}{9}}$
+\end{itemize}
+Ahora podemos calcular el pago esperado de $C$ sabiendo que el jugador elige la probabilidad más alta en los nodos de decision. 
+\begin{align*}
+    v(C)=&(\frac{5}{7}\cdot \mathbf{\frac{2800}{9}})+(\frac{2}{7}\cdot\mathbf{\frac{1850}{9}})\\
+    v(C)=& \frac{5900}{21}\approx 280,95
+\end{align*}
+\subsubsection{Información del día de muerte ($A$)}
+Homologo al caso anterior, se calculan las esperanzas de $W$ y $M$ en los nodos de $A$ para ver que utilidad elige el jugador.
+\begin{itemize}
+    \item $v(W|V,A)=(400\cdot \frac{5}{7}-100\cdot \frac{2}{7})=\frac{1800}{7}$
+    \item $v(M|V,A)=(300\cdot \frac{5}{7}+250\cdot \frac{2}{7})=\mathbf{\frac{2000}{7}}$
+    \item $v(W|D,A)=(0\cdot \frac{5}{7}-400\cdot \frac{2}{7})=\mathbf{\frac{-800}{7}}$
+    \item $v(M|D,A)=(-320\cdot \frac{5}{7}+50\cdot \frac{2}{7})=\frac{-1500}{7}$
+\end{itemize}
+Ahora podemos calcular el pago esperado de $A$ sabiendo que el jugador elige la probabilidad más alta en los nodos de decision. 
+\begin{align*}
+    v(A)=&(\frac{7}{9}\cdot \mathbf{\frac{2000}{7}})+(\frac{2}{9}\cdot\mathbf{\frac{-800}{7}})\\
+    v(A)=& \frac{12400}{63}\approx 196,82
+\end{align*}
+
+\subsection{¿Que información debería elegir el jugador?}
+Según los pagos esperados, debería optar por al información acerca del resultado de la guerra, ya que le genera un mayor pago esperado que sabiendo el día de la muerte de su madre. De igual forma, con cualquier información se va a encontrar mejor que sin información del todo. Esto debido a que con la información, si supiera que van a ganar él iría a la guerra, si perdieran no. 
+\subsection{¿Cual es el rango de precio que puede cobrar el oráculo?}
+Este se obtiene de la diferencia entre el pago esperado de obtener cada información, es decir: 
+\begin{align*}
+    P=&\frac{5900}{21}-\frac{1100}{63}\\
+    P=&\frac{6700}{63}\approx 106,35
+\end{align*}
+Es decir, el rango de precios ($P$) que puede cobrar el oráculo es: $$P=[0,\frac{6700}{63}]$$\\
+Si el oráculo cobra exactamente $P=\frac{6700}{63}$ o más, al jugador le sera indiferente pagar o no por la información, en cambio si el precio es menor si paga por la información. 
+\newpage
+\section{Exitto de Taquilla}
+\subsection{}
+\subsection{Forma Normal}
+$$\Gamma:<N,\{A_i\}^n_{i=1},\{S_i\}^n_{i=1},\{V_i(\cdot)\}^n_{i=1}>$$
+\begin{itemize}
+    \item Jugadores: $N=\{1,2\}$
+    \item Acciones: $A_i=\{A,C,D,F,H,I,M,R,T\},\; \forall   i\in N$
+    \item Estrategias puras: $S_i=\{A,C,D,F,H,I,M,R,T\},\; \forall   i\in N$
+    \item Pagos: $V_i(s_1,s_2)\; \forall i \in N, \; \forall\; s_1 \in S_1, \; \forall\; s_2 \in S_2$
+\end{itemize}
+\subsection{Estrategia Dominante}
+Los supuestos de estrategias estrictcamente dominantes son: 
+\begin{itemize}
+    \item Racionalidad
+    \item En equilibrio no independientemente de lo que juegue $J_1,J_2$, siempre jugaran el EED
+    \item No siempre existe, pero si lo hace es unico. 
+\end{itemize}
+$\therefore S^{EED}=\emptyset$
+\subsection{Eliminación iterada de estrategías estrictamente dominadas}
+Los supuestos de Eliminación iterada de estrategías estrictamente dominadas son: 
+\begin{itemize}
+    \item Racionalidad+Conocimiento de racionalidad
+    \item En equilibrio que no haria el jugadir racional
+    \item Siempre existe, pero no necesariamente es unico.
+\end{itemize}
+
+\end{document}

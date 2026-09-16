@@ -152,7 +152,7 @@ def write_course_page(course_slug: str, course_name: str, docs: list[Document]):
 
     lines.append(f"# {course_name}")
     lines.append("")
-    lines.append("## Documentos")
+    lines.append("## Temas")
     lines.append("")
 
     docs = sorted(docs, key=lambda d: d.title)

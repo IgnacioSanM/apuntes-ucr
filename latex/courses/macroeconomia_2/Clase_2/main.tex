@@ -144,7 +144,52 @@ Ahora:
         \item $\forall\lambda : \lambda F(K,N)=F(\lambda K,\lambda N)$, es decir es homogénea de grado 1 y posee \textbf{rendimientos constantes a escala}
     \end{enumerate}
 \end{comentarioprofe}
-
+\begin{ejemplo}{Cobb Douglas}
+    Sea: 
+    $$Y_t=A_tK_T^\alpha N_t^{1-\alpha}$$
+    Entonces: 
+    \begin{itemize}
+        \item COP.1: $A_t(1-\alpha)K_t^\alpha N^{-\alpha}_t=w_k$
+        Es decir: $N_t=(\frac{(1-\alpha)A_tK_t}{w_k})^\frac{1}{\alpha}$
+    \end{itemize}
+    Es decir, sabemos que el comportamiento de $N_t$ se vera de forma: $$N_t=N^d(\underbrace{w_t}_{(-)},\underbrace{A_t}_{(+)},\underbrace{K_t}_{(+)})$$
+    De igual forma: 
+    \begin{itemize}
+        \item COP.3 $\Rightarrow{}$ $K_{t+1}=k^d(\underbrace{r_t}_{(-)},\underbrace{A_{t+1}}_{(+)},\underbrace{f_t}_{(-)})$
+        \item Recuerde que $I_t=k_{t+1}-(1-\delta)k_t$, de forma que: $$I_t=k^d(\underbrace{r_t}_{(-)},\underbrace{A_{t+1}}_{(+)},\underbrace{f_t}_{(-)})$$
+    \end{itemize}
+\end{ejemplo}
+\newpage
+\subsection{Hogar}
+\begin{itemize}
+    \item En terminos de una empresa, cuando produce mas que sus costos obtiene \textbf{dividendendos}, estos dividendos pertenecen a un hogar representativo.
+    \item Entonces recibe: $(D_t,D_{t+1})$ de manera exógena. 
+    \item El hogar obtiene utilidad del consumo y ocio. 
+    \item El ocio se mide en horas. 
+    \item Suponga un hogar que dispone de $H$ horas tal que: 
+    $$H=\underbrace{L}_{Ocio}+\underbrace{N}_{Trabajo}$$
+\end{itemize}
+ Suponga que $u(C,L)$ con $u_c(C,L)>0;\; U_L(C,L)>0;\;U_{CC}(C,L)<0;\;U_{LL}(C,L)<0$\\
+ Sujeto a: 
+ \begin{itemize}
+     \item En periodo $t:\quad C_t+S_t=w_tN_t+D_t$
+     \item En periodo $t+1:\quad C_{t+1}=w_{t+1}N_{t+1}+D_{t+1}+(1+r_t)S_t$ donde $S_{t+1}=0$ por la condicion terminal. 
+     \item Consolidando ambas restricciones: 
+     $$C_t+\frac{C_{t+1}}{1+r_t}=w_tN_t+D_t+\frac{w_{t+1}N_{t+1}+D_{t+1}}{1+r_t}$$
+ \end{itemize}
+ Por ende el problema del hogar seria: 
+ \begin{align*}
+     max \;u(C_t,L_t)+\beta u(C_{t+1},L_{t+1})\; \\s.a\;\;\quad \quad \quad \quad \\ C_t+\frac{C_{t+1}}{1+r_t}=w_tN_t+D_t+\frac{w_{t+1}N_{t+1}+D_{t+1}}{1+r_t} \\
+ \end{align*}
+Como sabemos que $1=L+N$, entonces $L=1-N$\\
+Por ende: 
+ \begin{align*}
+     max \;u(C_t,1-N_t)+\beta u(C_{t+1},1-N_{t+1})\; \\s.a\;\;\quad \quad \quad \quad \\ C_t+\frac{C_{t+1}}{1+r_t}=w_tN_t+D_t+\frac{w_{t+1}N_{t+1}+D_{t+1}}{1+r_t} \\
+ \end{align*}
+ Sabemos que el agente es menos feliz por trabajar ya que peirde ocio, sin embargo si no trabaja pierde capacidad de consumo, por lo cual debe encontrar un equilibrio de ambos. \\
+ \begin{itemize}
+     \item $[C_t]: U_c()$
+ \end{itemize}
 
 
 

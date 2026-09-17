@@ -1,10 +1,10 @@
 # Fdb version 4
 ["xdvipdfmx"] 0 "main.xdv" "main.pdf" "main" 0 -1
-  "main.xdv" 1789582101.80213 13980 7ca69e4d7f2aab695de96b6dba98268f "xelatex"
+  "main.xdv" 1789675959.8901 13980 2fac56ac31de8194c19431ee4e2ba429 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1789582100.58017 "main.tex" "main.xdv" "main" 1789582101.86213 2
+["xelatex"] 1789675958.99585 "main.tex" "main.xdv" "main" 1789675959.94697 2
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -186,7 +186,7 @@
   "/usr/local/texlive/2026/texmf-var/web2c/xetex/xelatex.fmt" 1774209578 5948559 ca66a59f4cdd4ce9709bed46018cb9cb ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
   "figuras/curva_indf_1.drawio.svg" 1785961016.54899 51282 512e44e1f6de3b1bb9585208bd132936 ""
-  "main.aux" 1789582101.80206 822 814958b0311da8845e255920b255726b "xelatex"
+  "main.aux" 1789675959.89001 822 814958b0311da8845e255920b255726b "xelatex"
   "main.tex" 1788577941.05807 11738 4e64cd53830e7ec41662942dc918b8ba ""
   "svg-inkscape/curva_indf_1.drawio_svg-tex.pdf" 1787078598.72186 18878 54dc10158223b4c7bef4c5ceabeaa571 ""
   "svg-inkscape/curva_indf_1.drawio_svg-tex.pdf_tex" 1787078598.72234 2100 c7e0367e8329604aec04474902a51f15 ""

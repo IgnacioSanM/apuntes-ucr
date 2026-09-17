@@ -162,6 +162,7 @@ Ahora:
 \newpage
 \subsection{Hogar}
 \begin{itemize}
+    \item El hogar representativo es dueño de la empresa. $(D_t,D_{t+1})$, lo recibe de fir a exogena. 
     \item En terminos de una empresa, cuando produce mas que sus costos obtiene \textbf{dividendendos}, estos dividendos pertenecen a un hogar representativo.
     \item Entonces recibe: $(D_t,D_{t+1})$ de manera exógena. 
     \item El hogar obtiene utilidad del consumo y ocio. 
@@ -188,9 +189,51 @@ Por ende:
  \end{align*}
  Sabemos que el agente es menos feliz por trabajar ya que peirde ocio, sin embargo si no trabaja pierde capacidad de consumo, por lo cual debe encontrar un equilibrio de ambos. \\
  \begin{itemize}
-     \item $[C_t]: U_c()$
+     \item $[C_t]: U_c(C_t,1-N_t)-\lambda =0$\\
+     \item $[C_{t+1}]: \beta U_c(C_{t+1}, 1 - N_{t+1})-\frac{\lambda}{1+r_t}=0$\\
+     \item $[N_t]:-U_L(Ct,1-N_t)+\lambda w_t=0$
+     \item $[\lambda]: RPI$
  \end{itemize}
+ \begin{comentarioprofe}Observe
+     Sea: 
+     \begin{align*}
+         u(C,L)=& log(C) + \theta \; log(L) \\
+         u(C,1-N)=& log(C) + \theta \; log(1-N) \\
+         \frac{\partial \;u(C,L)}{\partial \; N}=&\frac{u_L(C,L)}{\partial\; L} \frac{\partial\; L}{\partial\;N}=\frac{\partial(1-N)}{\partial N}=-1
+     \end{align*}
+     \textbf{¿Que mide $\theta$?}
+ \end{comentarioprofe}
 
+ Simplificando las CPO:\\
+ \begin{enumerate}
+    \item De [$C_t$] y [$C_{t+1}$]: 
+     $U_c(C_t,1-N_t)=\beta(1+r_t)\;u_c(C_{t+1},1-N_{t+1})$
+    \item De [$C_t$] y [$1-N_t$]: 
+     $U_L(C_{t},1-N_{t})=w_t\;u_c(C_{t},1-N_{t})$
+    \item De [$C_{t+1}$] y [$1-N_{t+1}$]: 
+     $U_L(C_{t+1},1-N_{t+1})=w_{t+1}\;u_c(C_{t+1},1-N_{t+1})$
+    \item RPI 
+ \end{enumerate}
 
+ Por lo tanto: 
+ $$\underbrace{U_L(C_t,1-N_t)}_{\text{Beneficio marginal de una unidad de ocio}}=\underbrace{w_tU_C(C_t,1-N_t)}_{\text{Costo marginal de una unidad de ocio}}$$
+ \textbf{Por ende $\theta$ mide la sustitucion entre $C_t$ y $N_t$}
 
+\begin{ejemplo}Ejemplo 
+    Suponga un modelo de un periodo sin ahorro. 
+    $C_t=w_tN_t+D_t$\\
+    Ademas $N_t=1-L_t$
+    De forma que: 
+    \begin{figure} [H]
+            \centering 
+            \includesvg[width=0.5\linewidth]{figuras/clase_2/macro_t2_5.drawio.svg}
+            \label{fig:placeholder}
+    \end{figure}
+    Vamos a tener: $N_t=N^S(w_t,\theta_t) \Rightarrow{}$ \textbf{Funcion de oferta laboral}\\
+    $$\frac{\partial\;N^S}{\partial\; w_t}\xrightarrow{CPO\;2},\;\frac{\partial\;N^S}{\partial\; w_t}>0 \Rightarrow{}\textbf{Efecto Sutitucion}\\\\
+    \frac{\partial\;N^S}{\partial\; w_t}\xrightarrow{RPI},\;\uparrow C_t,\uparrow L_t\xrightarrow{}\downarrow N_t\Rightarrow{} \frac{\partial\;N^S}{\partial\; w_t}<0 \Rightarrow{}\textbf{Efecto Ingreso}
+    $$
+    \textbf{Vamos a asumir siempre que el efecto sustitucion domina.}\\
+    $C_t=C^d(\underbrace{Y_t}_{(+)},\underbrace{Y_{t+1}}_{(+)},\underbrace{r_t}_{\underbrace{(-)}_{Efecto\; Sutitucion}})$
+\end{ejemplo}
 \end{document}
